@@ -1,5 +1,15 @@
 # app-builder-lib
 
+## 26.0.7
+
+### Patch Changes
+
+- [#8864](https://github.com/electron-userland/electron-builder/pull/8864) [`3fe27d77`](https://github.com/electron-userland/electron-builder/commit/3fe27d77587a05a7d568b3b21f1df8f0a1650c92) Thanks [@beyondkmp](https://github.com/beyondkmp)! - Detected circular dependencies and add debug logs for nodeModulesCollector, and refactored YarnNodeModulesCollector to extend NpmNodeModulesCollector.
+
+- Updated dependencies []:
+  - dmg-builder@26.0.7
+  - electron-builder-squirrel-windows@26.0.7
+
 ## 26.0.6
 
 ### Patch Changes

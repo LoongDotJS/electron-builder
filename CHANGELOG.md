@@ -1,3 +1,12 @@
+# [](https://github.com/electron-userland/electron-builder/compare/v26.0.6...v) (2025-02-14)
+
+
+### Bug Fixes
+
+* Detected circular dependencies and add debug logs for nodeModulesCollector ([#8864](https://github.com/electron-userland/electron-builder/issues/8864)) ([3fe27d7](https://github.com/electron-userland/electron-builder/commit/3fe27d77587a05a7d568b3b21f1df8f0a1650c92))
+
+
+
 # [](https://github.com/electron-userland/electron-builder/compare/v26.0.5...v) (2025-02-06)
 
 
