@@ -48,6 +48,9 @@ export function downloadAllRequiredElectronVersions(): Promise<any> {
           ? ["ia32", "x64"]
           : require(`${path.join(__dirname, "../../..")}/packages/builder-util/out/util`).getArchCliNames()
     for (const arch of archs) {
+      if (arch === "loong64") {
+        continue
+      }
       versions.push({
         version: ELECTRON_VERSION,
         arch,

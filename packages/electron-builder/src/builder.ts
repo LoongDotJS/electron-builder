@@ -17,6 +17,7 @@ export interface CliOptions extends PackagerOptions, PublishOptions {
   ia32?: boolean
   armv7l?: boolean
   arm64?: boolean
+  loong64?: boolean
   universal?: boolean
 
   dir?: boolean
@@ -44,6 +45,9 @@ export function normalizeOptions(args: CliOptions): BuildOptions {
       }
       if (args.ia32) {
         result.push(Arch.ia32)
+      }
+      if (args.loong64) {
+        result.push(Arch.loong64)
       }
       if (args.universal) {
         result.push(Arch.universal)
@@ -121,6 +125,7 @@ export function normalizeOptions(args: CliOptions): BuildOptions {
   delete result.x64
   delete result.armv7l
   delete result.arm64
+  delete result.loong64
   delete result.universal
 
   let config = result.config
@@ -255,6 +260,11 @@ export function configureBuildCommand(yargs: yargs.Argv): yargs.Argv {
     .option("arm64", {
       group: buildGroup,
       description: "Build for arm64",
+      type: "boolean",
+    })
+    .option("loong64", {
+      group: buildGroup,
+      description: "Build for loong64",
       type: "boolean",
     })
     .option("universal", {
