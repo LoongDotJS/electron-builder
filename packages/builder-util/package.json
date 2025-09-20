@@ -1,5 +1,5 @@
 {
-  "name": "builder-util",
+  "name": "@loongdotjs/builder-util",
   "version": "26.8.1",
   "main": "out/util.js",
   "author": "Vladimir Krivosheev",
