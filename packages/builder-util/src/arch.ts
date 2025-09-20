@@ -3,10 +3,11 @@ export enum Arch {
   x64,
   armv7l,
   arm64,
+  loong64,
   universal,
 }
 
-export type ArchType = "x64" | "ia32" | "armv7l" | "arm64" | "universal"
+export type ArchType = "x64" | "ia32" | "armv7l" | "arm64" | "loong64" | "universal"
 
 export function toLinuxArchString(arch: Arch, targetName: string): string {
   switch (arch) {
@@ -18,14 +19,15 @@ export function toLinuxArchString(arch: Arch, targetName: string): string {
       return targetName === "snap" || targetName === "deb" ? "armhf" : targetName === "flatpak" ? "arm" : "armv7l"
     case Arch.arm64:
       return targetName === "pacman" || targetName === "rpm" || targetName === "flatpak" ? "aarch64" : "arm64"
-
+    case Arch.loong64:
+      return targetName === "pacman" || targetName === "deb" ? "loong64" : "loongarch64"
     default:
       throw new Error(`Unsupported arch ${arch}`)
   }
 }
 
 export function getArchCliNames(): Array<string> {
-  return [Arch[Arch.ia32], Arch[Arch.x64], Arch[Arch.armv7l], Arch[Arch.arm64]]
+  return [Arch[Arch.ia32], Arch[Arch.x64], Arch[Arch.armv7l], Arch[Arch.arm64], Arch[Arch.loong64]]
 }
 
 export function getArchSuffix(arch: Arch, defaultArch?: string): string {
@@ -43,6 +45,8 @@ export function archFromString(name: string): Arch {
     case "arm":
     case "armv7l":
       return Arch.armv7l
+    case "loong64":
+      return Arch.loong64
     case "universal":
       return Arch.universal
     default:

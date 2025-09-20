@@ -323,6 +323,7 @@
         "arm64",
         "armv7l",
         "ia32",
+        "loong64",
         "universal",
         "x64"
       ],
@@ -6113,6 +6114,7 @@
                 "arm64",
                 "armv7l",
                 "ia32",
+                "loong64",
                 "universal",
                 "x64"
               ],
