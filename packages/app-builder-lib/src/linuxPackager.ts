@@ -81,6 +81,8 @@ export function toAppImageOrSnapArch(arch: Arch): string {
       return "arm"
     case Arch.arm64:
       return "arm_aarch64"
+    case Arch.loong64:
+      return "loong64"
 
     default:
       throw new Error(`Unsupported arch ${arch}`)
