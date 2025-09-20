@@ -20,8 +20,7 @@ export function toLinuxArchString(arch: Arch, targetName: string): string {
     case Arch.arm64:
       return targetName === "pacman" || targetName === "rpm" || targetName === "flatpak" ? "aarch64" : "arm64"
     case Arch.loong64:
-      return "loong64"
-
+      return targetName === "pacman" || targetName === "deb" ? "loong64" : "loongarch64"
     default:
       throw new Error(`Unsupported arch ${arch}`)
   }
