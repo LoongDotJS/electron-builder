@@ -83,6 +83,10 @@ export function getArtifactArchName(arch: Arch, ext: string): string {
     if (ext === "pacman" || ext === "rpm" || ext === "flatpak") {
       archName = "aarch64"
     }
+  } else if (arch === Arch.loong64) {
+    if (ext === "rpm") {
+      archName = "loongarch64"
+    }
   }
   return archName
 }
