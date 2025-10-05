@@ -1,6 +1,6 @@
 {
   "name": "@loongdotjs/builder-util",
-  "version": "25.1.7",
+  "version": "25.1.7-1",
   "main": "out/util.js",
   "author": "Vladimir Krivosheev",
   "license": "MIT",
