@@ -4,7 +4,7 @@ import { Arch, getArchSuffix, SquirrelWindowsOptions, Target, WinPackager } from
 import * as path from "path"
 import * as fs from "fs"
 import * as os from "os"
-import { Options as SquirrelOptions, createWindowsInstaller, convertVersion } from "electron-winstaller"
+import { Options as SquirrelOptions, createWindowsInstaller, convertVersion } from "@loongdotjs/electron-winstaller"
 
 export default class SquirrelWindowsTarget extends Target {
   //tslint:disable-next-line:no-object-literal-type-assertion
