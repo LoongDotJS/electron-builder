@@ -1,4 +1,4 @@
-import { Arch, asArray, executeAppBuilder, getArchSuffix, getPath7za, log, serializeToYaml, TmpDir, toLinuxArchString, unlinkIfExists, use } from "builder-util"
+import { Arch, asArray, executeAppBuilder, getArchSuffix, getPath7za, log, serializeToYaml, TmpDir, toLinuxArchString, unlinkIfExists, use } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { copyFile, outputFile, stat } from "fs-extra"
 import { mkdir, readFile } from "fs/promises"

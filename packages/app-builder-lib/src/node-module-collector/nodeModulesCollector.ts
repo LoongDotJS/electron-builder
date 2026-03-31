@@ -2,7 +2,7 @@ import { hoist, type HoisterTree, type HoisterResult } from "./hoist"
 import * as path from "path"
 import * as fs from "fs"
 import type { NodeModuleInfo, DependencyTree, DependencyGraph, Dependency } from "./types"
-import { exec, log } from "builder-util"
+import { exec, log } from "@loongdotjs/builder-util"
 import { Lazy } from "lazy-val"
 
 export abstract class NodeModulesCollector<T extends Dependency<T, OptionalsType>, OptionalsType> {

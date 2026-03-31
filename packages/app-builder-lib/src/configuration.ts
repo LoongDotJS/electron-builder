@@ -1,4 +1,4 @@
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import { BeforeBuildContext, Target } from "./core"
 import { ElectronBrandingOptions, ElectronDownloadOptions } from "./electron/ElectronFramework"
 import { PrepareApplicationStageDirectoryOptions } from "./Framework"

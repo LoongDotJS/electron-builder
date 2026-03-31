@@ -1,6 +1,6 @@
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import { PublishConfiguration } from "builder-util-runtime"
-import { UploadTask } from "electron-publish"
+import { UploadTask } from "@loongdotjs/electron-publish"
 import { Configuration } from "./configuration"
 import { Platform, Target } from "./core"
 import { Packager } from "./packager"

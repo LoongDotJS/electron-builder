@@ -1,6 +1,6 @@
 import { getProjectRootPath } from "@electron/rebuild/lib/search-module"
 
-import { httpExecutor, InvalidConfigurationError, log } from "builder-util"
+import { httpExecutor, InvalidConfigurationError, log } from "@loongdotjs/builder-util"
 import { parseXml } from "builder-util-runtime"
 import { readJson } from "fs-extra"
 import { Lazy } from "lazy-val"

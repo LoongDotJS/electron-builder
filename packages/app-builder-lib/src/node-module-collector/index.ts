@@ -3,7 +3,7 @@ import { PnpmNodeModulesCollector } from "./pnpmNodeModulesCollector"
 import { YarnNodeModulesCollector } from "./yarnNodeModulesCollector"
 import { detect, PM, getPackageManagerVersion } from "./packageManager"
 import { NodeModuleInfo } from "./types"
-import { exec } from "builder-util"
+import { exec } from "@loongdotjs/builder-util"
 
 async function isPnpmProjectHoisted(rootDir: string) {
   const command = await PnpmNodeModulesCollector.pmCommand.value

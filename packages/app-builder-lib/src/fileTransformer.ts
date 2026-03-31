@@ -1,4 +1,4 @@
-import { debug, deepAssign, FileTransformer, log } from "builder-util"
+import { debug, deepAssign, FileTransformer, log } from "@loongdotjs/builder-util"
 import { readFile } from "fs/promises"
 import * as path from "path"
 import { Configuration } from "./configuration"

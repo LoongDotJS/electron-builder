@@ -1,4 +1,4 @@
-import { Filter, FilterStats } from "builder-util"
+import { Filter, FilterStats } from "@loongdotjs/builder-util"
 import { Minimatch } from "minimatch"
 import * as path from "path"
 

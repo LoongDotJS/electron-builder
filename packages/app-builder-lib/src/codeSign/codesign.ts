@@ -1,4 +1,4 @@
-import { InvalidConfigurationError, statOrNull } from "builder-util"
+import { InvalidConfigurationError, statOrNull } from "@loongdotjs/builder-util"
 import { outputFile } from "fs-extra"
 import { homedir } from "os"
 import * as path from "path"

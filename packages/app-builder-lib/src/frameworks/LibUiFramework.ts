@@ -1,4 +1,4 @@
-import { executeAppBuilder } from "builder-util"
+import { executeAppBuilder } from "@loongdotjs/builder-util"
 import { emptyDir } from "fs-extra"
 import { chmod, mkdir, rename, writeFile } from "fs/promises"
 import * as path from "path"

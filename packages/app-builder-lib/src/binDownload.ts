@@ -1,4 +1,4 @@
-import { executeAppBuilder } from "builder-util"
+import { executeAppBuilder } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 
 const versionToPromise = new Map<string, Promise<string>>()

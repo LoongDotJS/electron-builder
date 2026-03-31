@@ -1,7 +1,7 @@
 // copy from https://github.com/egoist/detect-package-manager/blob/main/src/index.ts
 // and merge https://github.com/egoist/detect-package-manager/pull/9 to support Monorepo
 import { resolve, dirname } from "path"
-import { exec, exists } from "builder-util"
+import { exec, exists } from "@loongdotjs/builder-util"
 
 export type PM = "npm" | "yarn" | "pnpm" | "bun"
 

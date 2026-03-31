@@ -1,4 +1,4 @@
-import { Arch, log } from "builder-util"
+import { Arch, log } from "@loongdotjs/builder-util"
 import { computeDownloadUrl, getPublishConfigs, getPublishConfigsForUpdateInfo } from "../../publish/PublishManager"
 import { WinPackager } from "../../winPackager"
 import { NsisWebOptions } from "./nsisOptions"

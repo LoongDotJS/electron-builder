@@ -13,7 +13,7 @@ import {
   safeStringifyJson,
   serializeToYaml,
   TmpDir,
-} from "builder-util"
+} from "@loongdotjs/builder-util"
 import { CancellationToken } from "builder-util-runtime"
 import { chmod, mkdirs, outputFile } from "fs-extra"
 import * as isCI from "is-ci"

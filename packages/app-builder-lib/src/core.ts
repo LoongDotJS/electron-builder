@@ -1,4 +1,4 @@
-import { Arch, archFromString, ArchType } from "builder-util"
+import { Arch, archFromString, ArchType } from "@loongdotjs/builder-util"
 import { AllPublishOptions, Nullish } from "builder-util-runtime"
 
 // https://github.com/YousefED/typescript-json-schema/issues/80

@@ -1,4 +1,4 @@
-import { Arch, debug } from "builder-util"
+import { Arch, debug } from "@loongdotjs/builder-util"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { AppInfo, Target } from "../"

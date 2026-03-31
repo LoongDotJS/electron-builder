@@ -1,4 +1,4 @@
-import { Arch, asArray, AsyncTaskManager, exists, InvalidConfigurationError, isEmptyOrSpaces, isPullRequest, log, safeStringifyJson, serializeToYaml } from "builder-util"
+import { Arch, asArray, AsyncTaskManager, exists, InvalidConfigurationError, isEmptyOrSpaces, isPullRequest, log, safeStringifyJson, serializeToYaml } from "@loongdotjs/builder-util"
 import {
   BitbucketOptions,
   CancellationToken,
@@ -25,8 +25,8 @@ import {
   SnapStorePublisher,
   SpacesPublisher,
   UploadTask,
-} from "electron-publish"
-import { MultiProgress } from "electron-publish/out/multiProgress"
+} from "@loongdotjs/electron-publish"
+import { MultiProgress } from "@loongdotjs/electron-publish/out/multiProgress"
 import { writeFile } from "fs/promises"
 import * as isCi from "is-ci"
 import * as path from "path"

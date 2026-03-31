@@ -1,7 +1,7 @@
 import { notarize } from "@electron/notarize"
 import { NotarizeOptionsNotaryTool, NotaryToolKeychainCredentials } from "@electron/notarize/lib/types"
 import { PerFileSignOptions, SignOptions } from "@electron/osx-sign/dist/cjs/types"
-import { Arch, AsyncTaskManager, copyFile, deepAssign, exec, getArchSuffix, InvalidConfigurationError, log, orIfFileNotExist, statOrNull, unlinkIfExists, use } from "builder-util"
+import { Arch, AsyncTaskManager, copyFile, deepAssign, exec, getArchSuffix, InvalidConfigurationError, log, orIfFileNotExist, statOrNull, unlinkIfExists, use } from "@loongdotjs/builder-util"
 import { MemoLazy, Nullish } from "builder-util-runtime"
 import * as fs from "fs/promises"
 import { mkdir, readdir } from "fs/promises"
@@ -85,7 +85,7 @@ export class MacPackager extends PlatformPackager<MacConfiguration> {
           break
 
         case "dmg": {
-          const { DmgTarget } = require("dmg-builder")
+          const { DmgTarget } = require("@loongdotjs/dmg-builder")
           mapper(name, outDir => new DmgTarget(this, outDir))
           break
         }

@@ -1,5 +1,5 @@
-import { PlatformPackager } from "app-builder-lib"
-import { executeFinally } from "builder-util"
+import { PlatformPackager } from "@loongdotjs/app-builder-lib"
+import { executeFinally } from "@loongdotjs/builder-util"
 import * as path from "path"
 import { hdiUtil } from "./hdiuil"
 

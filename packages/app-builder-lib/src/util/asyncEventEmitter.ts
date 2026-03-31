@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { CancellationToken, Nullish } from "builder-util-runtime"
 
 type Handler = (...args: any[]) => Promise<void> | void

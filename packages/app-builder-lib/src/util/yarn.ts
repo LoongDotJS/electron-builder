@@ -1,7 +1,7 @@
 import * as electronRebuild from "@electron/rebuild"
 import { getProjectRootPath } from "@electron/rebuild/lib/search-module"
 import { RebuildMode } from "@electron/rebuild/lib/types"
-import { asArray, log, spawn } from "builder-util"
+import { asArray, log, spawn } from "@loongdotjs/builder-util"
 import { pathExists } from "fs-extra"
 import { Lazy } from "lazy-val"
 import { homedir } from "os"

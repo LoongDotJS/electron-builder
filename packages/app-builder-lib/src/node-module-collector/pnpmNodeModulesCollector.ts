@@ -2,7 +2,7 @@ import { Lazy } from "lazy-val"
 import { NodeModulesCollector } from "./nodeModulesCollector"
 import { Dependency, DependencyTree, PnpmDependency } from "./types"
 import * as path from "path"
-import { exec, log } from "builder-util"
+import { exec, log } from "@loongdotjs/builder-util"
 
 export class PnpmNodeModulesCollector extends NodeModulesCollector<PnpmDependency, PnpmDependency> {
   constructor(rootDir: string) {

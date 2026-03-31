@@ -1,7 +1,7 @@
 import { signAsync } from "@electron/osx-sign"
 import { SignOptions } from "@electron/osx-sign/dist/cjs/types"
 import { Identity as _Identity } from "@electron/osx-sign/dist/cjs/util-identities"
-import { copyFile, exec, Fields, InvalidConfigurationError, isEmptyOrSpaces, isEnvTrue, isPullRequest, log, Logger, retry, TmpDir, unlinkIfExists } from "builder-util"
+import { copyFile, exec, Fields, InvalidConfigurationError, isEmptyOrSpaces, isEnvTrue, isPullRequest, log, Logger, retry, TmpDir, unlinkIfExists } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { createHash, randomBytes } from "crypto"
 import { rename } from "fs/promises"

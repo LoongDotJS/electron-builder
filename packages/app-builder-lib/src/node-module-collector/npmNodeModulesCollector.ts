@@ -1,7 +1,7 @@
 import { Lazy } from "lazy-val"
 import { NodeModulesCollector } from "./nodeModulesCollector"
 import { DependencyTree, NpmDependency, ParsedDependencyTree } from "./types"
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 
 export class NpmNodeModulesCollector extends NodeModulesCollector<NpmDependency, string> {
   constructor(rootDir: string) {

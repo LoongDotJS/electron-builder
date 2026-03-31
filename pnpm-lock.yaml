@@ -116,6 +116,12 @@ importers:
       '@electron/universal':
         specifier: 2.0.1
         version: 2.0.1
+      '@loongdotjs/builder-util':
+        specifier: workspace:*
+        version: link:../builder-util
+      '@loongdotjs/electron-publish':
+        specifier: workspace:*
+        version: link:../electron-publish
       '@malept/flatpak-bundler':
         specifier: ^0.4.0
         version: 0.4.0
@@ -125,9 +131,6 @@ importers:
       async-exit-hook:
         specifier: ^2.0.1
         version: 2.0.1
-      builder-util:
-        specifier: workspace:*
-        version: link:../builder-util
       builder-util-runtime:
         specifier: workspace:*
         version: link:../builder-util-runtime
@@ -149,9 +152,6 @@ importers:
       ejs:
         specifier: ^3.1.8
         version: 3.1.10
-      electron-publish:
-        specifier: workspace:*
-        version: link:../electron-publish
       fs-extra:
         specifier: ^10.1.0
         version: 10.1.0
@@ -252,6 +252,12 @@ importers:
       '@babel/preset-react':
         specifier: 7.24.7
         version: 7.24.7(@babel/core@7.24.9)
+      '@loongdotjs/dmg-builder':
+        specifier: workspace:*
+        version: link:../dmg-builder
+      '@loongdotjs/electron-builder-squirrel-windows':
+        specifier: workspace:*
+        version: link:../electron-builder-squirrel-windows
       '@types/debug':
         specifier: 4.1.7
         version: 4.1.7
@@ -279,12 +285,6 @@ importers:
       '@types/tiny-async-pool':
         specifier: ^1
         version: 1.0.5
-      dmg-builder:
-        specifier: workspace:*
-        version: link:../dmg-builder
-      electron-builder-squirrel-windows:
-        specifier: workspace:*
-        version: link:../electron-builder-squirrel-windows
       toml:
         specifier: ^3.0.0
         version: 3.0.0
@@ -380,10 +380,10 @@ importers:
 
   packages/dmg-builder:
     dependencies:
-      app-builder-lib:
+      '@loongdotjs/app-builder-lib':
         specifier: workspace:*
         version: link:../app-builder-lib
-      builder-util:
+      '@loongdotjs/builder-util':
         specifier: workspace:*
         version: link:../builder-util
       builder-util-runtime:
@@ -415,21 +415,21 @@ importers:
 
   packages/electron-builder:
     dependencies:
-      app-builder-lib:
+      '@loongdotjs/app-builder-lib':
         specifier: workspace:*
         version: link:../app-builder-lib
-      builder-util:
+      '@loongdotjs/builder-util':
         specifier: workspace:*
         version: link:../builder-util
+      '@loongdotjs/dmg-builder':
+        specifier: workspace:*
+        version: link:../dmg-builder
       builder-util-runtime:
         specifier: workspace:*
         version: link:../builder-util-runtime
       chalk:
         specifier: ^4.1.2
         version: 4.1.2
-      dmg-builder:
-        specifier: workspace:*
-        version: link:../dmg-builder
       fs-extra:
         specifier: ^10.1.0
         version: 10.1.0
@@ -458,10 +458,10 @@ importers:
 
   packages/electron-builder-squirrel-windows:
     dependencies:
-      app-builder-lib:
+      '@loongdotjs/app-builder-lib':
         specifier: workspace:*
         version: link:../app-builder-lib
-      builder-util:
+      '@loongdotjs/builder-util':
         specifier: workspace:*
         version: link:../builder-util
       electron-winstaller:
@@ -477,36 +477,36 @@ importers:
 
   packages/electron-forge-maker-appimage:
     dependencies:
-      app-builder-lib:
+      '@loongdotjs/app-builder-lib':
         specifier: workspace:*
         version: link:../app-builder-lib
 
   packages/electron-forge-maker-nsis:
     dependencies:
-      app-builder-lib:
+      '@loongdotjs/app-builder-lib':
         specifier: workspace:*
         version: link:../app-builder-lib
 
   packages/electron-forge-maker-nsis-web:
     dependencies:
-      app-builder-lib:
+      '@loongdotjs/app-builder-lib':
         specifier: workspace:*
         version: link:../app-builder-lib
 
   packages/electron-forge-maker-snap:
     dependencies:
-      app-builder-lib:
+      '@loongdotjs/app-builder-lib':
         specifier: workspace:*
         version: link:../app-builder-lib
 
   packages/electron-publish:
     dependencies:
+      '@loongdotjs/builder-util':
+        specifier: workspace:*
+        version: link:../builder-util
       '@types/fs-extra':
         specifier: ^9.0.11
         version: 9.0.13
-      builder-util:
-        specifier: workspace:*
-        version: link:../builder-util
       builder-util-runtime:
         specifier: workspace:*
         version: link:../builder-util-runtime
@@ -584,15 +584,27 @@ importers:
       '@jest/core':
         specifier: 29.7.0
         version: 29.7.0(ts-node@10.9.2(@types/node@22.10.1)(typescript@5.7.2))
+      '@loongdotjs/app-builder-lib':
+        specifier: workspace:*
+        version: link:../packages/app-builder-lib
+      '@loongdotjs/builder-util':
+        specifier: workspace:*
+        version: link:../packages/builder-util
+      '@loongdotjs/dmg-builder':
+        specifier: workspace:*
+        version: link:../packages/dmg-builder
+      '@loongdotjs/electron-builder':
+        specifier: workspace:*
+        version: link:../packages/electron-builder
+      '@loongdotjs/electron-builder-squirrel-windows':
+        specifier: workspace:*
+        version: link:../packages/electron-builder-squirrel-windows
+      '@loongdotjs/electron-publish':
+        specifier: workspace:*
+        version: link:../packages/electron-publish
       adm-zip:
         specifier: 0.5.16
         version: 0.5.16
-      app-builder-lib:
-        specifier: workspace:*
-        version: link:../packages/app-builder-lib
-      builder-util:
-        specifier: workspace:*
-        version: link:../packages/builder-util
       builder-util-runtime:
         specifier: workspace:*
         version: link:../packages/builder-util-runtime
@@ -605,18 +617,6 @@ importers:
       depcheck:
         specifier: 1.4.3
         version: 1.4.3
-      dmg-builder:
-        specifier: workspace:*
-        version: link:../packages/dmg-builder
-      electron-builder:
-        specifier: workspace:*
-        version: link:../packages/electron-builder
-      electron-builder-squirrel-windows:
-        specifier: workspace:*
-        version: link:../packages/electron-builder-squirrel-windows
-      electron-publish:
-        specifier: workspace:*
-        version: link:../packages/electron-publish
       electron-updater:
         specifier: workspace:*
         version: link:../packages/electron-updater

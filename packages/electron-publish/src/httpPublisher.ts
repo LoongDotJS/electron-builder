@@ -1,4 +1,4 @@
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import { stat } from "fs-extra"
 import { ClientRequest } from "http"
 import { basename } from "path"

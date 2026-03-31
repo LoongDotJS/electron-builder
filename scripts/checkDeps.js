@@ -15,6 +15,7 @@ const knownUnusedDevDependencies = new Set([
   "@rollup/plugin-typescript",
 ])
 const knownMissedDependencies = new Set(["babel-core", "babel-preset-env", "babel-preset-stage-0", "babel-preset-react"])
+const internalScope = "@loongdotjs/"
 
 const rootDir = path.join(__dirname, "..")
 const packageDir = path.join(rootDir, "packages")
@@ -22,19 +23,27 @@ const packageDir = path.join(rootDir, "packages")
 async function check(projectDir, devPackageData) {
   const packageName = path.basename(projectDir)
   // console.log(`Checking ${projectDir}`)
+  const packageData = await fs.readJson(path.join(projectDir, "package.json"))
 
   const result = await new Promise(resolve => {
     depCheck(projectDir, { ignoreDirs: ["out", "test", "pages", "typings", "docker", "certs", "templates", "vendor"] }, resolve)
   })
 
-  let unusedDependencies = result.dependencies
+  let unusedDependencies = result.dependencies.filter(name => {
+    if (!name.startsWith(internalScope)) {
+      return true
+    }
+    const unscopedName = name.substring(internalScope.length)
+    const usages = result.using[unscopedName]
+    return usages == null || usages.length === 0
+  })
   if (unusedDependencies.length > 0) {
     // Check root for unused deps (which could be cloned to any folder name, so we check basename of cwd)
     if (packageName === path.basename(process.cwd())) {
       unusedDependencies = unusedDependencies.filter(it => it !== "dmg-license")
     }
     if (packageName === "electron-builder") {
-      unusedDependencies = unusedDependencies.filter(it => it !== "dmg-builder")
+      unusedDependencies = unusedDependencies.filter(it => it !== "dmg-builder" && it !== "@loongdotjs/dmg-builder")
     }
     if (unusedDependencies.length > 0) {
       console.error(`${chalk.bold(packageName)} Unused dependencies: ${JSON.stringify(unusedDependencies, null, 2)}`)
@@ -69,6 +78,14 @@ async function check(projectDir, devPackageData) {
     ) {
       delete result.missing[name]
     }
+
+    if (
+      (packageData.dependencies != null && packageData.dependencies[`${internalScope}${name}`] != null) ||
+      (packageData.devDependencies != null && packageData.devDependencies[`${internalScope}${name}`] != null) ||
+      (packageData.peerDependencies != null && packageData.peerDependencies[`${internalScope}${name}`] != null)
+    ) {
+      delete result.missing[name]
+    }
   }
 
   if (Object.keys(result.missing).length > 0) {
@@ -76,7 +93,6 @@ async function check(projectDir, devPackageData) {
     return false
   }
 
-  const packageData = await fs.readJson(path.join(projectDir, "package.json"))
   for (const name of devPackageData.devDependencies == null ? [] : Object.keys(devPackageData.devDependencies)) {
     if (packageData.dependencies != null && packageData.dependencies[name] != null) {
       continue

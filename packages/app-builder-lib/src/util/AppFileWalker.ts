@@ -1,4 +1,4 @@
-import { FileConsumer, Filter, FilterStats } from "builder-util"
+import { FileConsumer, Filter, FilterStats } from "@loongdotjs/builder-util"
 import { readlink, stat, Stats } from "fs-extra"
 import * as path from "path"
 import { FileMatcher } from "../fileMatcher"

@@ -1,4 +1,4 @@
-import { exec, log, retry } from "builder-util"
+import { exec, log, retry } from "@loongdotjs/builder-util"
 
 export async function hdiUtil(args: string[]) {
   return retry(

@@ -1,4 +1,4 @@
-import { executeAppBuilder } from "builder-util"
+import { executeAppBuilder } from "@loongdotjs/builder-util"
 import { SpawnOptions } from "child_process"
 
 export function executeAppBuilderAsJson<T>(args: Array<string>): Promise<T> {

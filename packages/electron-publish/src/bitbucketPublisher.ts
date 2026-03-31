@@ -1,4 +1,4 @@
-import { Arch, httpExecutor, InvalidConfigurationError, isEmptyOrSpaces, log } from "builder-util"
+import { Arch, httpExecutor, InvalidConfigurationError, isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import { configureRequestOptions, HttpExecutor } from "builder-util-runtime"
 import { BitbucketOptions } from "builder-util-runtime/out/publishOptions"
 import * as FormData from "form-data"

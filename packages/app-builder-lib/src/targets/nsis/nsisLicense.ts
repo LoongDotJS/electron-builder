@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import * as fs from "fs"
 import * as path from "path"
 import { lcid } from "../../util/langs"

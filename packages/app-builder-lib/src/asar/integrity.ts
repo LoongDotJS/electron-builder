@@ -1,4 +1,4 @@
-import { FilterStats, log, statOrNull, walk } from "builder-util"
+import { FilterStats, log, statOrNull, walk } from "@loongdotjs/builder-util"
 import { createHash } from "crypto"
 import { createReadStream } from "fs"
 import { readdir } from "fs/promises"

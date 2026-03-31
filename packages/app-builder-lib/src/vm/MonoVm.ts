@@ -1,4 +1,4 @@
-import { exec, ExtraSpawnOptions, spawn } from "builder-util"
+import { exec, ExtraSpawnOptions, spawn } from "@loongdotjs/builder-util"
 import { ExecFileOptions, SpawnOptions } from "child_process"
 import { VmManager } from "./vm"
 

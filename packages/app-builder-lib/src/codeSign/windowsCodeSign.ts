@@ -1,4 +1,4 @@
-import { log, retry } from "builder-util"
+import { log, retry } from "@loongdotjs/builder-util"
 import { WindowsConfiguration } from "../options/winOptions"
 import { WinPackager } from "../winPackager"
 

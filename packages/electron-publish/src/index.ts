@@ -1,4 +1,4 @@
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import { CancellationToken } from "builder-util-runtime"
 import { MultiProgress } from "./multiProgress"
 
