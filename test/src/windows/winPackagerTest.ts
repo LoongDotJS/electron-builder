@@ -1,5 +1,5 @@
-import { ToolsetConfig } from "app-builder-lib/src/configuration"
-import { Arch, DIR_TARGET, Platform } from "electron-builder"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
+import { Arch, DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { CheckingWinPackager } from "../helpers/CheckingPackager"

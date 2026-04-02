@@ -1,4 +1,4 @@
-import { Arch, defaultArchFromString } from "builder-util"
+import { Arch, defaultArchFromString } from "@loongdotjs/builder-util"
 import * as path from "path"
 import { Platform, Target, TargetSpecificOptions } from "../core"
 import { copyFiles, getFileMatchers } from "../fileMatcher"

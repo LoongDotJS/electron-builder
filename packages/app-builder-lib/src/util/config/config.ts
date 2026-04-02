@@ -1,4 +1,4 @@
-import { DebugLogger, deepAssign, InvalidConfigurationError, log, safeStringifyJson, statOrNull } from "builder-util"
+import { DebugLogger, deepAssign, InvalidConfigurationError, log, safeStringifyJson, statOrNull } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { readJson } from "fs-extra"
 import { Lazy } from "lazy-val"

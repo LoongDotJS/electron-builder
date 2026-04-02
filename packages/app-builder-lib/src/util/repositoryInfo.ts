@@ -1,4 +1,4 @@
-import { orNullIfFileNotExist } from "builder-util"
+import { orNullIfFileNotExist } from "@loongdotjs/builder-util"
 import { readFile } from "fs-extra"
 import GitHost, { fromUrl } from "hosted-git-info"
 import * as path from "path"

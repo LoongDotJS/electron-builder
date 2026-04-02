@@ -1,4 +1,4 @@
-import { exec, executeAppBuilder } from "builder-util"
+import { exec, executeAppBuilder } from "@loongdotjs/builder-util"
 import { ExecFileOptions } from "child_process"
 
 /** @private */

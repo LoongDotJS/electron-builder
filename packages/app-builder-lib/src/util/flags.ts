@@ -1,4 +1,4 @@
-import { isEnvTrue } from "builder-util"
+import { isEnvTrue } from "@loongdotjs/builder-util"
 
 export function isUseSystemSigncode() {
   return isEnvTrue(process.env.USE_SYSTEM_SIGNCODE)

@@ -1,6 +1,6 @@
-import { Arch, exec } from "builder-util"
+import { Arch, exec } from "@loongdotjs/builder-util"
 import { parseXml } from "builder-util-runtime"
-import { Platform } from "electron-builder"
+import { Platform } from "@loongdotjs/electron-builder"
 import { outputFile } from "fs-extra"
 import * as fs from "fs/promises"
 import * as path from "path"

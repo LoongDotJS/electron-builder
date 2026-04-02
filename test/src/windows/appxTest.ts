@@ -1,9 +1,9 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import { readFile } from "fs-extra"
 import { mkdir } from "fs/promises"
 import * as path from "path"
 import { app, appThrows, copyTestAsset } from "../helpers/packTester"
-import { ToolsetConfig } from "app-builder-lib"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib"
 
 const winCodeSignVersions: ToolsetConfig["winCodeSign"][] = [
   // "0.0.0", // doesn't work for appx specifically, signtool.exe is too old.

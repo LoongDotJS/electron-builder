@@ -1,4 +1,4 @@
-import { Arch, isEmptyOrSpaces, log } from "builder-util"
+import { Arch, isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import * as os from "os"
 import * as path from "path"

@@ -1,4 +1,4 @@
-import { removePassword } from "builder-util"
+import { removePassword } from "@loongdotjs/builder-util"
 import { describe, it } from "vitest"
 
 const testValue = "secretValue"

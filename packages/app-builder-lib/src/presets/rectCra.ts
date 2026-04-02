@@ -1,4 +1,4 @@
-import { log, statOrNull } from "builder-util"
+import { log, statOrNull } from "@loongdotjs/builder-util"
 import * as path from "path"
 import { Configuration } from "../configuration"
 

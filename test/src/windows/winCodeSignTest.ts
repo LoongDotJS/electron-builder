@@ -1,12 +1,12 @@
 import { parseDn } from "builder-util-runtime"
-import { DIR_TARGET, Platform } from "electron-builder"
+import { DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
 import { outputFile } from "fs-extra"
 import { load } from "js-yaml"
 import * as path from "path"
 import { CheckingWinPackager } from "../helpers/CheckingPackager"
 import { app, appThrows } from "../helpers/packTester"
 import { ExpectStatic } from "vitest"
-import { ToolsetConfig } from "app-builder-lib/src/configuration"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
 
 test("parseDn", ({ expect }) => {
   expect(parseDn("CN=7digital Limited, O=7digital Limited, L=London, C=GB")).toMatchSnapshot()

@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { parse as parseEnv } from "dotenv"
 import { DotenvParseInput, expand } from "dotenv-expand"
 import { promises as fs } from "fs"

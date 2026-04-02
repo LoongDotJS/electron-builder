@@ -1,4 +1,4 @@
-import { InvalidConfigurationError, isEmptyOrSpaces, log } from "builder-util"
+import { InvalidConfigurationError, isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { readFile, readJson, readJsonSync } from "fs-extra"
 import * as path from "path"

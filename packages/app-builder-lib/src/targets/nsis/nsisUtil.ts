@@ -1,4 +1,4 @@
-import { Arch, copyFile, dirSize, isEmptyOrSpaces, log } from "builder-util"
+import { Arch, copyFile, dirSize, isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import { PackageFileInfo } from "builder-util-runtime"
 import * as fs from "fs/promises"
 import * as path from "path"

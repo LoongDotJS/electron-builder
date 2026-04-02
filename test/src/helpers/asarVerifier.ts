@@ -1,4 +1,4 @@
-import { readAsar } from "app-builder-lib/src/asar/asar"
+import { readAsar } from "@loongdotjs/app-builder-lib/src/asar/asar"
 import path from "path"
 import { expect, ExpectStatic } from "vitest"
 

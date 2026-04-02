@@ -2,7 +2,7 @@ import * as fs from "fs"
 import * as path from "path"
 import { ElectronPlatformName } from "./ElectronFramework"
 
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { getBin } from "../binDownload"
 import { PrepareApplicationStageDirectoryOptions } from "../Framework"
 

@@ -1,4 +1,4 @@
-import { FilterStats, MAX_FILE_REQUESTS } from "builder-util"
+import { FilterStats, MAX_FILE_REQUESTS } from "@loongdotjs/builder-util"
 import { realpathSync } from "fs"
 import { lstat, lstatSync, readdir } from "fs-extra"
 import * as path from "path"

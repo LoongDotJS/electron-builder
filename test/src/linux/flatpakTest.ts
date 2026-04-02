@@ -1,4 +1,4 @@
-import { Platform } from "electron-builder"
+import { Platform } from "@loongdotjs/electron-builder"
 import { app } from "../helpers/packTester"
 import * as which from "which"
 

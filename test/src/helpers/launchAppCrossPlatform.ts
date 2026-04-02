@@ -1,5 +1,5 @@
-import { getBinFromUrl } from "app-builder-lib/src/binDownload"
-import { isEmptyOrSpaces } from "builder-util"
+import { getBinFromUrl } from "@loongdotjs/app-builder-lib/src/binDownload"
+import { isEmptyOrSpaces } from "@loongdotjs/builder-util"
 import { ChildProcess, spawn } from "child_process"
 import { chmodSync } from "fs"
 import os from "os"

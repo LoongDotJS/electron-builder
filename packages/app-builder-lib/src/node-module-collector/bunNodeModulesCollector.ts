@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { PM } from "./packageManager"
 import { TraversedDependency } from "./types"
 import { TraversalNodeModulesCollector } from "./traversalNodeModulesCollector"

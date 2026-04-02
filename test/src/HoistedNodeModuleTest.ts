@@ -1,6 +1,6 @@
-import { PM } from "app-builder-lib/out/node-module-collector"
-import { spawn } from "builder-util/out/util"
-import { Arch, DIR_TARGET, Platform } from "electron-builder"
+import { PM } from "@loongdotjs/app-builder-lib/out/node-module-collector"
+import { spawn } from "@loongdotjs/builder-util/out/util"
+import { Arch, DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
 import * as path from "path"
 import { appTwoThrows, assertPack, linuxDirTarget, modifyPackageJson, verifyAsarFileTree } from "./helpers/packTester"
 import { ELECTRON_VERSION } from "./helpers/testConfig"
@@ -103,7 +103,7 @@ describe.ifNotWindows("node_module collectors", () => {
             }
             data.devDependencies = {
               electron: "23.2.0",
-              "electron-builder": "26.8.1",
+              "@loongdotjs/electron-builder": "26.8.1",
               "fs-extra": "11.0.0",
               "patch-package": "8.0.0",
             }
@@ -157,7 +157,7 @@ describe.ifNotWindows("node_module collectors", () => {
             }
             data.devDependencies = {
               electron: "23.2.0",
-              "electron-builder": "26.8.1",
+              "@loongdotjs/electron-builder": "26.8.1",
               "fs-extra": "11.0.0",
             }
             data.build.directories = {

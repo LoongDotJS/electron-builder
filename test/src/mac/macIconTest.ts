@@ -1,5 +1,5 @@
-import { parsePlistFile, PlistObject } from "app-builder-lib/out/util/plist"
-import { Arch, DIR_TARGET, Platform } from "electron-builder"
+import { parsePlistFile, PlistObject } from "@loongdotjs/app-builder-lib/out/util/plist"
+import { Arch, DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { CheckingMacPackager } from "../helpers/CheckingPackager"

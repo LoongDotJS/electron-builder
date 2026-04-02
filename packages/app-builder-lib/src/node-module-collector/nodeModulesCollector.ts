@@ -1,4 +1,4 @@
-import { exists, log, retry, TmpDir } from "builder-util"
+import { exists, log, retry, TmpDir } from "@loongdotjs/builder-util"
 import * as childProcess from "child_process"
 import * as fs from "fs-extra"
 import { createWriteStream } from "fs-extra"

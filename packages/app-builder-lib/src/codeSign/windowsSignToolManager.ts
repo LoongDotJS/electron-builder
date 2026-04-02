@@ -1,4 +1,4 @@
-import { asArray, InvalidConfigurationError, log, retry } from "builder-util"
+import { asArray, InvalidConfigurationError, log, retry } from "@loongdotjs/builder-util"
 import { MemoLazy, parseDn } from "builder-util-runtime"
 import { rename } from "fs-extra"
 import { Lazy } from "lazy-val"

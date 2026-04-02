@@ -1,4 +1,4 @@
-import { asArray, exists, isEmptyOrSpaces, log } from "builder-util"
+import { asArray, exists, isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import { outputFile } from "fs-extra"
 import { Lazy } from "lazy-val"
 import { join } from "path"

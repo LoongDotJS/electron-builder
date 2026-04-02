@@ -1,12 +1,12 @@
 import { GenericServerOptions } from "builder-util-runtime"
-import { Arch, build, Platform } from "electron-builder"
+import { Arch, build, Platform } from "@loongdotjs/electron-builder"
 import { outputFile } from "fs-extra"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { assertThat } from "../helpers/fileAssert"
 import { app, appThrows, copyTestAsset, modifyPackageJson } from "../helpers/packTester"
 import { ELECTRON_VERSION } from "../helpers/testConfig"
-import { ToolsetConfig } from "app-builder-lib/src"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src"
 
 const appImageTarget = Platform.LINUX.createTarget("appimage", Arch.x64)
 

@@ -1,9 +1,9 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { app, assertPack, copyTestAsset } from "../helpers/packTester"
 import { checkHelpers, doTest, expectUpdateMetadata } from "../helpers/winHelper"
-import { ToolsetConfig } from "app-builder-lib/src/configuration"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
 
 const winCodeSignVersions: ToolsetConfig["winCodeSign"][] = ["0.0.0", "1.0.0", "1.1.0"]
 const nsisTarget = Platform.WINDOWS.createTarget("nsis", Arch.x64)

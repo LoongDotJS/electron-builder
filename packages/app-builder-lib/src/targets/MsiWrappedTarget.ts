@@ -1,4 +1,4 @@
-import { Arch, deepAssign, exists, InvalidConfigurationError } from "builder-util"
+import { Arch, deepAssign, exists, InvalidConfigurationError } from "@loongdotjs/builder-util"
 import { UUID } from "builder-util-runtime"
 import * as path from "path"
 import { MsiWrappedOptions } from "../"

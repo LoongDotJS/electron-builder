@@ -1,4 +1,4 @@
-import { log } from "builder-util/out/log"
+import { log } from "@loongdotjs/builder-util/out/log"
 import debug from "debug"
 import * as path from "path"
 import * as requireMaybe from "../../helpers/dynamic-import"

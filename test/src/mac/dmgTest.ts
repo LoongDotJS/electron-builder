@@ -1,13 +1,13 @@
 // import { describe, test } from "../../vitest-scripts/vitest-setup"
-import { PlatformPackager } from "app-builder-lib"
-import { Arch, copyFile, exec } from "builder-util"
-import { Platform } from "electron-builder"
+import { PlatformPackager } from "@loongdotjs/app-builder-lib"
+import { Arch, copyFile, exec } from "@loongdotjs/builder-util"
+import { Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { assertThat } from "../helpers/fileAssert"
 import { app, assertPack, copyTestAsset } from "../helpers/packTester"
 import { beforeAll } from "vitest"
-import type { attachAndExecute as aAndE, getDmgTemplatePath as dmgTemplate } from "dmg-builder/out/dmgUtil"
+import type { attachAndExecute as aAndE, getDmgTemplatePath as dmgTemplate } from "@loongdotjs/dmg-builder/out/dmgUtil"
 
 const dmgTarget = Platform.MAC.createTarget("dmg", Arch.x64)
 const defaultTarget = Platform.MAC.createTarget(undefined, Arch.x64)
@@ -18,7 +18,7 @@ describe.heavy.ifMac("dmg", { sequential: true }, () => {
 
   beforeAll(async () => {
     // import at runtime to avoid issues on non-macOS platforms
-    const { attachAndExecute: a, getDmgTemplatePath: d } = await import("dmg-builder/out/dmgUtil")
+    const { attachAndExecute: a, getDmgTemplatePath: d } = await import("@loongdotjs/dmg-builder/out/dmgUtil")
     attachAndExecute = a
     getDmgTemplatePath = d
   })

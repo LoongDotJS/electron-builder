@@ -1,6 +1,6 @@
 import * as path from "path"
 import * as fs from "fs-extra"
-import { copyOrLinkFile, log } from "builder-util"
+import { copyOrLinkFile, log } from "@loongdotjs/builder-util"
 import { AppImageBuilderOptions } from "./appImageUtil"
 
 const ICON_DIR_RELATIVE_PATH = "usr/share/icons/hicolor"

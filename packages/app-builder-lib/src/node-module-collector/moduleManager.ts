@@ -1,4 +1,4 @@
-import { exists, isEmptyOrSpaces, log, LogLevel } from "builder-util"
+import { exists, isEmptyOrSpaces, log, LogLevel } from "@loongdotjs/builder-util"
 import { PackageJson } from "./types"
 import * as fs from "fs-extra"
 import * as path from "path"

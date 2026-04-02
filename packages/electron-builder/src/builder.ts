@@ -1,7 +1,7 @@
-import { build as _build, Configuration, DIR_TARGET, Packager, PackagerOptions, Platform } from "app-builder-lib"
-import { addValue, Arch, archFromString, deepAssign } from "builder-util"
+import { build as _build, Configuration, DIR_TARGET, Packager, PackagerOptions, Platform } from "@loongdotjs/app-builder-lib"
+import { addValue, Arch, archFromString, deepAssign } from "@loongdotjs/builder-util"
 import * as chalk from "chalk"
-import { PublishOptions } from "electron-publish"
+import { PublishOptions } from "@loongdotjs/electron-publish"
 import * as yargs from "yargs"
 
 export function createYargs(): yargs.Argv<unknown> {

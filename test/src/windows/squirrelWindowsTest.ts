@@ -1,8 +1,8 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import * as path from "path"
 import { CheckingWinPackager } from "../helpers/CheckingPackager"
 import { app, assertPack, copyTestAsset } from "../helpers/packTester"
-import { ToolsetConfig } from "app-builder-lib"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib"
 
 const winCodeSignVersions: ToolsetConfig["winCodeSign"][] = ["0.0.0", "1.0.0", "1.1.0"]
 

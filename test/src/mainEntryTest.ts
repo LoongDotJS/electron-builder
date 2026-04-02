@@ -1,4 +1,4 @@
-import { createTargets, DIR_TARGET, Platform } from "electron-builder"
+import { createTargets, DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { appTwoThrows, assertPack, modifyPackageJson } from "./helpers/packTester"

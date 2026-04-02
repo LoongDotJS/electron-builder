@@ -1,4 +1,4 @@
-import { asArray, copyOrLinkFile, getPlatformIconFileName, InvalidConfigurationError, log, unlinkIfExists } from "builder-util"
+import { asArray, copyOrLinkFile, getPlatformIconFileName, InvalidConfigurationError, log, unlinkIfExists } from "@loongdotjs/builder-util"
 import { rename, utimes } from "fs/promises"
 import * as path from "path"
 import * as fs from "fs"

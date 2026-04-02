@@ -1,6 +1,6 @@
 import { createPackageFromStreams, AsarStreamType, AsarDirectory } from "@electron/asar"
-import { isEmptyOrSpaces, log } from "builder-util"
-import { exists, Filter, FilterStats } from "builder-util/out/fs"
+import { isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
+import { exists, Filter, FilterStats } from "@loongdotjs/builder-util/out/fs"
 import * as fs from "fs-extra"
 import { readlink } from "fs-extra"
 import * as path from "path"

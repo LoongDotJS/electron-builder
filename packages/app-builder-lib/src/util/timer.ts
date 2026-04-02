@@ -1,4 +1,4 @@
-import { debug } from "builder-util"
+import { debug } from "@loongdotjs/builder-util"
 
 export interface Timer {
   end(): void

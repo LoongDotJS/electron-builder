@@ -15,6 +15,9 @@ const knownUnusedDevDependencies = new Set([
   "eslint-config-prettier",
   "eslint-plugin-prettier",
   "@rollup/plugin-typescript",
+  "@vitest/ui",
+  "is-ci",
+  "vitest",
 ])
 const knownMissedDependencies = new Set(["babel-core", "babel-preset-env", "babel-preset-stage-0", "babel-preset-react"])
 
@@ -22,7 +25,8 @@ const rootDir = path.join(__dirname, "..")
 const packageDir = path.join(rootDir, "packages")
 
 async function check(projectDir, devPackageData) {
-  const packageName = path.basename(projectDir)
+  const packageData = await fs.readJson(path.join(projectDir, "package.json"))
+  const packageName = packageData.name || path.basename(projectDir)
   // console.log(`Checking ${projectDir}`)
 
   const result = await new Promise(resolve => {
@@ -32,11 +36,11 @@ async function check(projectDir, devPackageData) {
   let unusedDependencies = result.dependencies
   if (unusedDependencies.length > 0) {
     // Check root for unused deps (which could be cloned to any folder name, so we check basename of cwd)
-    if (packageName === path.basename(process.cwd())) {
+    if (path.basename(projectDir) === path.basename(process.cwd())) {
       unusedDependencies = unusedDependencies.filter(it => it !== "dmg-license")
     }
-    if (packageName === "electron-builder") {
-      unusedDependencies = unusedDependencies.filter(it => it !== "dmg-builder")
+    if (packageName === "@loongdotjs/electron-builder") {
+      unusedDependencies = unusedDependencies.filter(it => it !== "@loongdotjs/dmg-builder")
     }
     if (unusedDependencies.length > 0) {
       console.error(`${chalk.bold(packageName)} Unused dependencies: ${JSON.stringify(unusedDependencies, null, 2)}`)
@@ -45,7 +49,7 @@ async function check(projectDir, devPackageData) {
   }
 
   let unusedDevDependencies = result.devDependencies.filter(it => !it.startsWith("@types/") && !knownUnusedDevDependencies.has(it))
-  if (packageName === "dmg-builder") {
+  if (packageName === "@loongdotjs/dmg-builder") {
     unusedDevDependencies = unusedDevDependencies.filter(it => it !== "temp-file")
   }
   if (unusedDevDependencies.length > 0) {
@@ -59,15 +63,15 @@ async function check(projectDir, devPackageData) {
     delete result.missing.toml
   }
 
-  if (packageName === "electron-builder") {
-    delete result.missing["electron-publish"]
+  if (packageName === "@loongdotjs/electron-builder") {
+    delete result.missing["@loongdotjs/electron-publish"]
   }
 
   for (const name of Object.keys(result.missing)) {
     if (
-      name === "electron-builder-squirrel-windows" ||
+      name === "@loongdotjs/electron-builder-squirrel-windows" ||
       name === "electron-webpack" ||
-      (packageName === "app-builder-lib" && (name === "dmg-builder" || knownMissedDependencies.has(name) || name.startsWith("@babel/")))
+      (packageName === "@loongdotjs/app-builder-lib" && (name === "@loongdotjs/dmg-builder" || knownMissedDependencies.has(name) || name.startsWith("@babel/")))
     ) {
       delete result.missing[name]
     }
@@ -78,7 +82,6 @@ async function check(projectDir, devPackageData) {
     return false
   }
 
-  const packageData = await fs.readJson(path.join(projectDir, "package.json"))
   for (const name of devPackageData.devDependencies == null ? [] : Object.keys(devPackageData.devDependencies)) {
     if (packageData.dependencies != null && packageData.dependencies[name] != null) {
       continue

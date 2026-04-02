@@ -1,5 +1,5 @@
 {
-  "name": "electron-builder-squirrel-windows",
+  "name": "@loongdotjs/electron-builder-squirrel-windows",
   "version": "26.8.2",
   "main": "out/SquirrelWindowsTarget.js",
   "author": "Vladimir Krivosheev",
@@ -16,8 +16,8 @@
     "template.nuspectemplate"
   ],
   "dependencies": {
-    "app-builder-lib": "workspace:*",
-    "builder-util": "workspace:*",
+    "@loongdotjs/app-builder-lib": "workspace:*",
+    "@loongdotjs/builder-util": "workspace:*",
     "electron-winstaller": "5.4.0"
   },
   "devDependencies": {

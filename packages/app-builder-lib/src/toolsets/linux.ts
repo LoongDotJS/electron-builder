@@ -1,4 +1,4 @@
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import * as path from "path"
 import { downloadArtifact, getBinFromUrl } from "../binDownload"
 

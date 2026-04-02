@@ -1,4 +1,4 @@
-import { asArray, log, spawn } from "builder-util"
+import { asArray, log, spawn } from "@loongdotjs/builder-util"
 import { pathExists } from "fs-extra"
 import { Lazy } from "lazy-val"
 import { homedir } from "os"

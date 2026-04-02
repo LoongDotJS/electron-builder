@@ -1,4 +1,4 @@
-import { Arch, build, PackagerOptions, Platform } from "electron-builder"
+import { Arch, build, PackagerOptions, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs"
 import * as path from "path"
 import { assertThat } from "./helpers/fileAssert"

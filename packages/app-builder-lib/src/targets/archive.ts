@@ -1,4 +1,4 @@
-import { debug7z, exec, exists, getPath7za, log, statOrNull, unlinkIfExists } from "builder-util"
+import { debug7z, exec, exists, getPath7za, log, statOrNull, unlinkIfExists } from "@loongdotjs/builder-util"
 import { move } from "fs-extra"
 import * as path from "path"
 import { create } from "tar"

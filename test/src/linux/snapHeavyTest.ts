@@ -1,4 +1,4 @@
-import { Arch, Platform } from "app-builder-lib"
+import { Arch, Platform } from "@loongdotjs/app-builder-lib"
 import { app, EXTENDED_TIMEOUT, snapTarget } from "../helpers/packTester"
 import * as which from "which"
 

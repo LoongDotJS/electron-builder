@@ -1,4 +1,4 @@
-import { NodeHttpExecutor, serializeToYaml, TmpDir } from "builder-util"
+import { NodeHttpExecutor, serializeToYaml, TmpDir } from "@loongdotjs/builder-util"
 import { AllPublishOptions, DownloadOptions } from "builder-util-runtime"
 import { AppUpdater, MacUpdater, NsisUpdater } from "electron-updater"
 import { NoOpLogger, TestOnlyUpdaterOptions } from "electron-updater/out/AppUpdater"

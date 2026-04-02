@@ -1,4 +1,4 @@
-import { Arch, CopyFileTransformer, executeAppBuilder, exists, FileTransformer, InvalidConfigurationError, log, use, walk } from "builder-util"
+import { Arch, CopyFileTransformer, executeAppBuilder, exists, FileTransformer, InvalidConfigurationError, log, use, walk } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { isCI } from "ci-info"
 import { createHash } from "crypto"
@@ -90,7 +90,7 @@ export class WinPackager extends PlatformPackager<WindowsConfiguration> {
           switch (name) {
             case "squirrel":
               try {
-                return require("electron-builder-squirrel-windows").default
+                return require("@loongdotjs/electron-builder-squirrel-windows").default
               } catch (e: any) {
                 throw new InvalidConfigurationError(`Module electron-builder-squirrel-windows must be installed in addition to build Squirrel.Windows: ${e.stack || e}`)
               }

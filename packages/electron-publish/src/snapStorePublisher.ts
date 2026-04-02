@@ -1,4 +1,4 @@
-import { executeAppBuilder } from "builder-util"
+import { executeAppBuilder } from "@loongdotjs/builder-util"
 import { SnapStoreOptions } from "builder-util-runtime/out/publishOptions"
 import * as path from "path"
 import { PublishContext, UploadTask } from "."

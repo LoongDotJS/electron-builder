@@ -58,7 +58,7 @@
     "@malept/flatpak-bundler": "^0.4.0",
     "@types/fs-extra": "9.0.13",
     "async-exit-hook": "^2.0.1",
-    "builder-util": "workspace:*",
+    "@loongdotjs/builder-util": "workspace:*",
     "builder-util-runtime": "workspace:*",
     "chromium-pickle-js": "^0.2.0",
     "ci-info": "4.3.1",
@@ -66,7 +66,7 @@
     "dotenv": "^16.4.5",
     "dotenv-expand": "^11.0.6",
     "ejs": "^3.1.8",
-    "electron-publish": "workspace:*",
+    "@loongdotjs/electron-publish": "workspace:*",
     "fs-extra": "^10.1.0",
     "hosted-git-info": "^4.1.0",
     "isbinaryfile": "^5.0.0",
@@ -114,13 +114,13 @@
     "@types/semver": "7.7.1",
     "@types/tiny-async-pool": "^1",
     "@types/which": "^3.0.4",
-    "dmg-builder": "workspace:*",
-    "electron-builder-squirrel-windows": "workspace:*",
+    "@loongdotjs/dmg-builder": "workspace:*",
+    "@loongdotjs/electron-builder-squirrel-windows": "workspace:*",
     "toml": "^3.0.0"
   },
   "peerDependencies": {
-    "dmg-builder": "workspace:*",
-    "electron-builder-squirrel-windows": "workspace:*"
+    "@loongdotjs/dmg-builder": "workspace:*",
+    "@loongdotjs/electron-builder-squirrel-windows": "workspace:*"
   },
   "//": "electron-builder-squirrel-windows and dmg-builder added as dev dep for tests (as otherwise `require` doesn't work using Yarn 2)",
   "typings": "./out/index.d.ts"

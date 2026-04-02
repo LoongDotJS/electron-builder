@@ -1,5 +1,5 @@
-import { copyDir } from "builder-util"
-import { Arch, Platform } from "electron-builder"
+import { copyDir } from "@loongdotjs/builder-util"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import { app, AssertPackOptions } from "./helpers/packTester"
 
 const checkOptions: AssertPackOptions = {

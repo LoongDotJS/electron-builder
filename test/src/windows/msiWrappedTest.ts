@@ -1,8 +1,8 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import { XMLParser } from "fast-xml-parser"
 import * as fs from "fs"
 import { app, appThrows } from "../helpers/packTester"
-import { ToolsetConfig } from "app-builder-lib/src/configuration"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
 
 const parser = new XMLParser({
   ignoreAttributes: false,

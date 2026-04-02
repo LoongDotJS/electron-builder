@@ -1,4 +1,4 @@
-import { getBinFromUrl } from "app-builder-lib/out/binDownload"
+import { getBinFromUrl } from "@loongdotjs/app-builder-lib/out/binDownload"
 
 test("download binary from Github", async ({ expect }) => {
   const bin = await getBinFromUrl(

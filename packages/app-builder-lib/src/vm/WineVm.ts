@@ -1,4 +1,4 @@
-import { ExtraSpawnOptions } from "builder-util"
+import { ExtraSpawnOptions } from "@loongdotjs/builder-util"
 import { ExecFileOptions, SpawnOptions } from "child_process"
 import * as path from "path"
 import { execWine } from "../wine"
