@@ -97,7 +97,7 @@ importers:
         version: 0.64.0
       vitest:
         specifier: ^3.2.2
-        version: 3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4(vitest@3.2.4))(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1)
+        version: 3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4)(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1)
 
   packages/app-builder-lib:
     dependencies:
@@ -306,7 +306,7 @@ importers:
 
   packages/builder-util:
     dependencies:
-      7zip-bin:
+      '@loongdotjs/7zip-bin':
         specifier: ~5.2.0
         version: 5.2.0
       '@types/debug':
@@ -470,9 +470,9 @@ importers:
       '@loongdotjs/builder-util':
         specifier: workspace:*
         version: link:../builder-util
-      electron-winstaller:
-        specifier: 5.4.0
-        version: 5.4.0
+      '@loongdotjs/electron-winstaller':
+        specifier: 5.4.0-1
+        version: 5.4.0-1
     devDependencies:
       '@types/archiver':
         specifier: 5.3.1
@@ -579,8 +579,8 @@ importers:
         specifier: 7.7.1
         version: 7.7.1
       electron:
-        specifier: 35.7.5
-        version: 35.7.5
+        specifier: 35.4.0
+        version: 35.4.0
 
   test:
     dependencies:
@@ -605,6 +605,9 @@ importers:
       '@loongdotjs/electron-publish':
         specifier: workspace:*
         version: link:../packages/electron-publish
+      '@loongdotjs/electron-winstaller':
+        specifier: 5.4.0-1
+        version: 5.4.0-1
       adm-zip:
         specifier: 0.5.16
         version: 0.5.16
@@ -623,9 +626,6 @@ importers:
       electron-updater:
         specifier: workspace:*
         version: link:../packages/electron-updater
-      electron-winstaller:
-        specifier: 5.4.0
-        version: 5.4.0
       fs-extra:
         specifier: ^10.1.0
         version: 10.1.0
@@ -698,7 +698,7 @@ importers:
         version: 1.6.3
       vitest:
         specifier: ^3.0.4
-        version: 3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4(vitest@3.2.4))(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1)
+        version: 3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4)(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1)
       vitest-mock-commonjs:
         specifier: ^1.0.2
         version: 1.0.2
@@ -707,9 +707,6 @@ importers:
         version: 5.0.0
 
 packages:
-
-  7zip-bin@5.2.0:
-    resolution: {integrity: sha512-ukTPVhqG4jNzMro2qA9HSCSSVJN3aN7tlb+hfqYCt3ER0yWroeA2VR38MNrOHLQ/cVj+DaIMad0kFCtWWowh/A==}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -1958,6 +1955,13 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
+  '@loongdotjs/7zip-bin@5.2.0':
+    resolution: {integrity: sha512-Xok1C+RxP36skqETp9JF7p4Hq18Bc0BY7Xk+uqbYV9U3NbIIIb4EdwazUbR4QMvSYaASN9ZYNjkVOB1wHwiQUA==}
+
+  '@loongdotjs/electron-winstaller@5.4.0-1':
+    resolution: {integrity: sha512-Mre9P/XzFXhhS3s/+z1A2+zEyizoAW5iUtkdmXVFBKe1NO3i/To+Od0diAynWO6S/CiGNHHOBEswmlZnnCkwXA==}
+    engines: {node: '>=8.0.0'}
+
   '@malept/cross-spawn-promise@2.0.0':
     resolution: {integrity: sha512-1DpKU0Z5ThltBwjNySMC14g0CkbyhCaz9FkhxqNsZI6uAPJXFS8cMXlBKo26FJ8ZuW6S9GCMcR9IO5k2X5/9Fg==}
     engines: {node: '>= 12.13.0'}
@@ -3152,12 +3156,8 @@ packages:
   electron-to-chromium@1.5.129:
     resolution: {integrity: sha512-JlXUemX4s0+9f8mLqib/bHH8gOHf5elKS6KeWG3sk3xozb/JTq/RLXIv8OKUWiK4Ah00Wm88EFj5PYkFr4RUPA==}
 
-  electron-winstaller@5.4.0:
-    resolution: {integrity: sha512-bO3y10YikuUwUuDUQRM4KfwNkKhnpVO7IPdbsrejwN9/AABJzzTQ4GeHwyzNSrVO+tEH3/Np255a3sVZpZDjvg==}
-    engines: {node: '>=8.0.0'}
-
-  electron@35.7.5:
-    resolution: {integrity: sha512-dnL+JvLraKZl7iusXTVTGYs10TKfzUi30uEDTqsmTm0guN9V2tbOjTzyIZbh9n3ygUjgEYyo+igAwMRXIi3IPw==}
+  electron@35.4.0:
+    resolution: {integrity: sha512-VIPSNcUnic00aaE83w6BW4Dj1kE8A5DU0nVbvwqotN3+gseGunbP4WyHp/kfKXVKQj1S3No3HnYxU5LJmYbAtw==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -5149,8 +5149,6 @@ packages:
 
 snapshots:
 
-  7zip-bin@5.2.0: {}
-
   '@ampproject/remapping@2.3.0':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
@@ -6793,6 +6791,20 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@loongdotjs/7zip-bin@5.2.0': {}
+
+  '@loongdotjs/electron-winstaller@5.4.0-1':
+    dependencies:
+      '@electron/asar': 3.4.1
+      debug: 4.4.3
+      fs-extra: 7.0.1
+      lodash: 4.17.21
+      temp: 0.9.4
+    optionalDependencies:
+      '@electron/windows-sign': 1.2.1
+    transitivePeerDependencies:
+      - supports-color
+
   '@malept/cross-spawn-promise@2.0.0':
     dependencies:
       cross-spawn: 7.0.6
@@ -7395,7 +7407,7 @@ snapshots:
       sirv: 3.0.1
       tinyglobby: 0.2.14
       tinyrainbow: 2.0.0
-      vitest: 3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4(vitest@3.2.4))(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1)
+      vitest: 3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4)(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1)
 
   '@vitest/utils@3.0.4':
     dependencies:
@@ -8069,19 +8081,7 @@ snapshots:
 
   electron-to-chromium@1.5.129: {}
 
-  electron-winstaller@5.4.0:
-    dependencies:
-      '@electron/asar': 3.4.1
-      debug: 4.4.3
-      fs-extra: 7.0.1
-      lodash: 4.17.21
-      temp: 0.9.4
-    optionalDependencies:
-      '@electron/windows-sign': 1.2.1
-    transitivePeerDependencies:
-      - supports-color
-
-  electron@35.7.5:
+  electron@35.4.0:
     dependencies:
       '@electron/get': 2.0.3
       '@types/node': 22.13.17
@@ -10074,7 +10074,7 @@ snapshots:
 
   vitest-mock-commonjs@1.0.2: {}
 
-  vitest@3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4(vitest@3.2.4))(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1):
+  vitest@3.2.4(@types/node@22.13.17)(@vitest/ui@3.0.4)(jiti@2.4.2)(sass@1.86.1)(yaml@2.7.1):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.4

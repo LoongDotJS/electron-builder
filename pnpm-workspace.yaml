@@ -7,3 +7,4 @@ minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - "tar"
   - "@electron/rebuild"
+  - "@loongdotjs/electron-winstaller"

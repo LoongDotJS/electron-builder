@@ -1,4 +1,4 @@
-import { path7x, path7za } from "7zip-bin"
+import { path7x, path7za } from "@loongdotjs/7zip-bin"
 import * as fs from "fs"
 import { chmod } from "fs-extra"
 
