@@ -1,6 +1,6 @@
 {
   "name": "@loongdotjs/electron-builder-squirrel-windows",
-  "version": "26.8.2",
+  "version": "26.8.2-loong1",
   "main": "out/SquirrelWindowsTarget.js",
   "author": "Vladimir Krivosheev",
   "license": "MIT",

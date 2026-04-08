@@ -1,7 +1,7 @@
 {
   "name": "@loongdotjs/app-builder-lib",
   "description": "electron-builder lib",
-  "version": "26.8.2",
+  "version": "26.8.2-loong1",
   "main": "out/index.js",
   "files": [
     "out",
