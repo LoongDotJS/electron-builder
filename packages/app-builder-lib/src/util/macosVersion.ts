@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { readFile } from "fs-extra"
 import { Lazy } from "lazy-val"
 import { release as osRelease } from "os"

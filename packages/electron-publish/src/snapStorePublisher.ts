@@ -1,4 +1,4 @@
-import { exec, loadCscLink, spawn } from "builder-util"
+import { exec, loadCscLink, spawn } from "@loongdotjs/builder-util"
 import { SnapStoreOptions } from "builder-util-runtime/out/publishOptions"
 import * as path from "path"
 import { PublishContext, UploadTask } from "."

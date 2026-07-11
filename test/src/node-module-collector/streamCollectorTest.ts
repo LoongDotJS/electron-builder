@@ -1,11 +1,11 @@
 import { afterEach, beforeEach, describe, test, vi } from "vitest"
-import { NodeModulesCollector } from "app-builder-lib/src/node-module-collector/nodeModulesCollector"
-import { LogMessageByKey } from "app-builder-lib/src/node-module-collector/moduleManager"
-import { PM } from "app-builder-lib/src/node-module-collector/packageManager"
+import { NodeModulesCollector } from "@loongdotjs/app-builder-lib/src/node-module-collector/nodeModulesCollector"
+import { LogMessageByKey } from "@loongdotjs/app-builder-lib/src/node-module-collector/moduleManager"
+import { PM } from "@loongdotjs/app-builder-lib/src/node-module-collector/packageManager"
 import * as childProcess from "child_process"
 import * as fsExtra from "fs-extra"
 import { EventEmitter } from "events"
-import type { TmpDir } from "builder-util"
+import type { TmpDir } from "@loongdotjs/builder-util"
 
 vi.mock("child_process", () => ({ spawn: vi.fn() }))
 vi.mock("fs-extra", async () => ({

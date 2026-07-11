@@ -1,4 +1,4 @@
-import { asArray, log, retry, spawn, stripSensitiveEnvVars } from "builder-util"
+import { asArray, log, retry, spawn, stripSensitiveEnvVars } from "@loongdotjs/builder-util"
 import { pathExists } from "fs-extra"
 import { homedir } from "os"
 import * as path from "path"

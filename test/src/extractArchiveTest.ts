@@ -1,7 +1,7 @@
 // isSafeExtractPath/moveDirAtomic are @internal and stripped from type declarations by
 // stripInternal:true. Import as namespace then cast to any so vitest's TypeScript transform
 // still resolves the real source exports while TypeScript type-checking is satisfied.
-import * as electronGet from "app-builder-lib/src/util/electronGet"
+import * as electronGet from "@loongdotjs/app-builder-lib/src/util/electronGet"
 const { extractArchive, isSafeExtractPath, moveDirAtomic } = electronGet as any
 import * as fs from "fs/promises"
 import * as os from "os"

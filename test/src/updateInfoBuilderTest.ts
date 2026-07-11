@@ -1,9 +1,9 @@
 import * as fsp from "fs/promises"
 import * as os from "os"
 import * as path from "path"
-import { createUpdateInfoTasks, writeUpdateInfoFiles, UpdateInfoFileTask } from "app-builder-lib/out/publish/updateInfoBuilder"
-import { Platform } from "app-builder-lib"
-import { Arch } from "builder-util"
+import { createUpdateInfoTasks, writeUpdateInfoFiles, UpdateInfoFileTask } from "@loongdotjs/app-builder-lib/out/publish/updateInfoBuilder"
+import { Platform } from "@loongdotjs/app-builder-lib"
+import { Arch } from "@loongdotjs/builder-util"
 import { load as yamlLoad } from "js-yaml"
 import { vi } from "vitest"
 

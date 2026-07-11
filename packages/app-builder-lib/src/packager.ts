@@ -14,7 +14,7 @@ import {
   safeStringifyJson,
   serializeToYaml,
   TmpDir,
-} from "builder-util"
+} from "@loongdotjs/builder-util"
 import { CancellationToken, deepAssign, retry } from "builder-util-runtime"
 import { chmod, mkdirs, outputFile } from "fs-extra"
 import { isCI } from "ci-info"

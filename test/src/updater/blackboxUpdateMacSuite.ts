@@ -1,4 +1,4 @@
-import { Arch } from "electron-builder"
+import { Arch } from "@loongdotjs/electron-builder"
 import { TestContext } from "vitest"
 import { runTest } from "./blackboxUpdateHelpers"
 

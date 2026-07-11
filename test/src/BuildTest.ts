@@ -1,18 +1,18 @@
-import { checkBuildRequestOptions } from "app-builder-lib"
-import { doMergeConfigs } from "app-builder-lib/out/util/config/config"
-import { Arch, createTargets, DIR_TARGET, Platform } from "electron-builder"
-import { createYargs } from "electron-builder/out/builder"
+import { checkBuildRequestOptions } from "@loongdotjs/app-builder-lib"
+import { doMergeConfigs } from "@loongdotjs/app-builder-lib/out/util/config/config"
+import { Arch, createTargets, DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
+import { createYargs } from "@loongdotjs/electron-builder/out/builder"
 import { promises as fs } from "fs"
 import { outputFile, outputJson } from "fs-extra"
 import * as path from "path"
 import { app, appTwo, appTwoThrows, assertPack, getFixtureDir, linuxDirTarget, modifyPackageJson, packageJson, toSystemIndependentPath } from "./helpers/packTester"
 import { ELECTRON_VERSION } from "./helpers/testConfig"
 import { verifySmartUnpack } from "./helpers/verifySmartUnpack"
-import { PM } from "app-builder-lib/out/node-module-collector/packageManager"
+import { PM } from "@loongdotjs/app-builder-lib/out/node-module-collector/packageManager"
 
 test.ifLinux("cli", ({ expect }) => {
   // because these methods are internal
-  const { configureBuildCommand, normalizeOptions } = require("electron-builder/out/builder")
+  const { configureBuildCommand, normalizeOptions } = require("@loongdotjs/electron-builder/out/builder")
   const yargs = createYargs()
   configureBuildCommand(yargs)
 

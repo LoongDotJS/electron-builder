@@ -1,4 +1,4 @@
-import { DebugLogger, exec, ExtraSpawnOptions, InvalidConfigurationError, log, spawn } from "builder-util"
+import { DebugLogger, exec, ExtraSpawnOptions, InvalidConfigurationError, log, spawn } from "@loongdotjs/builder-util"
 import { ExecFileOptions, SpawnOptions } from "child_process"
 import { Lazy } from "lazy-val"
 import * as path from "path"

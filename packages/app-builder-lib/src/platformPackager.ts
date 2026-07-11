@@ -15,7 +15,7 @@ import {
   orIfFileNotExist,
   sanitizeDirPath,
   statOrNull,
-} from "builder-util"
+} from "@loongdotjs/builder-util"
 import { deepAssign, Nullish } from "builder-util-runtime"
 import { readdir } from "fs/promises"
 import { Lazy } from "lazy-val"

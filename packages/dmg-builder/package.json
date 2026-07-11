@@ -1,5 +1,5 @@
 {
-	"name": "dmg-builder",
+	"name": "@loongdotjs/dmg-builder",
 	"version": "26.15.6",
 	"main": "out/dmgUtil.js",
 	"author": "Vladimir Krivosheev",
@@ -16,8 +16,8 @@
 		"templates"
 	],
 	"dependencies": {
-		"app-builder-lib": "workspace:*",
-		"builder-util": "workspace:*",
+		"@loongdotjs/app-builder-lib": "workspace:*",
+		"@loongdotjs/builder-util": "workspace:*",
 		"fs-extra": "^10.1.0",
 		"js-yaml": "^4.1.0"
 	},

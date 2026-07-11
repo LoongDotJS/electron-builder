@@ -3,7 +3,7 @@ import yargs from "yargs"
 
 // ─── Module mocks (hoisted by vitest above all imports) ───────────────────────
 
-vi.mock("app-builder-lib/out/util/electronGet", () => ({
+vi.mock("@loongdotjs/app-builder-lib/out/util/electronGet", () => ({
   getCacheDirectory: vi.fn().mockReturnValue("/home/user/.cache/electron-builder"),
 }))
 
@@ -24,15 +24,15 @@ vi.mock("readline/promises", () => ({
 }))
 
 // Keep real InvalidConfigurationError and ExecError for instanceof checks in wrap()
-vi.mock("builder-util", async () => {
-  const actual = await vi.importActual<typeof import("builder-util")>("builder-util")
+vi.mock("@loongdotjs/builder-util", async () => {
+  const actual = await vi.importActual<typeof import("@loongdotjs/builder-util")>("@loongdotjs/builder-util")
   return {
     ...actual,
     log: { info: vi.fn(), error: vi.fn(), warn: vi.fn(), debug: vi.fn() },
   }
 })
 
-vi.mock("app-builder-lib/out/util/config/load", () => ({
+vi.mock("@loongdotjs/app-builder-lib/out/util/config/load", () => ({
   loadEnv: vi.fn().mockResolvedValue(undefined),
 }))
 
@@ -40,13 +40,13 @@ vi.mock("app-builder-lib/out/util/config/load", () => ({
 
 import { access, rm } from "fs/promises"
 import { createInterface } from "readline/promises"
-import { getCacheDirectory } from "app-builder-lib/out/util/electronGet"
-import { ExecError, InvalidConfigurationError, log } from "builder-util"
+import { getCacheDirectory } from "@loongdotjs/app-builder-lib/out/util/electronGet"
+import { Arch, ExecError, InvalidConfigurationError, log } from "@loongdotjs/builder-util"
 // Relative imports bypass project-reference declaration files, which strip @internal exports
 import { clearCache } from "../../packages/electron-builder/src/cli/clear-cache"
 import { wrap } from "../../packages/electron-builder/src/cli/cli-util"
 import { quoteString } from "../../packages/electron-builder/src/cli/create-self-signed-cert"
-import { configureBuildCommand } from "../../packages/electron-builder/src/builder"
+import { configureBuildCommand, normalizeOptions } from "../../packages/electron-builder/src/builder"
 // @ts-ignore — configureInstallAppDepsCommand is @internal; CLI tsc strips it from declarations
 import { configureInstallAppDepsCommand } from "../../packages/electron-builder/src/cli/install-app-deps"
 // @ts-ignore — configurePublishCommand is @internal; CLI tsc strips it from declarations
@@ -236,12 +236,20 @@ function makeYargs() {
 }
 
 describe("configureBuildCommand", () => {
-  test("registers --x64 and --arm64 as boolean arch flags", () => {
+  test("registers architecture flags as booleans", () => {
     const instance = makeYargs()
     configureBuildCommand(instance)
-    const parsed = instance.parseSync(["--x64", "--arm64"])
+    const parsed = instance.parseSync(["--x64", "--arm64", "--loong64"])
     expect(parsed.x64).toBe(true)
     expect(parsed.arm64).toBe(true)
+    expect(parsed.loong64).toBe(true)
+  })
+
+  test("normalizes --loong64 into a build target", () => {
+    const normalized = normalizeOptions({ linux: [], loong64: true })
+    const archToTarget = [...normalized.targets!.values()][0]
+    expect([...archToTarget.keys()]).toEqual([Arch.loong64])
+    expect(normalized).not.toHaveProperty("loong64")
   })
 
   test("registers --mac as an array platform flag", () => {

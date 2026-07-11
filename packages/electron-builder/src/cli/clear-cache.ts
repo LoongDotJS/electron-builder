@@ -1,5 +1,5 @@
-import { getCacheDirectory } from "app-builder-lib/out/util/electronGet"
-import { log } from "builder-util"
+import { getCacheDirectory } from "@loongdotjs/app-builder-lib/out/util/electronGet"
+import { log } from "@loongdotjs/builder-util"
 import { access, constants, rm } from "fs/promises"
 import { createInterface } from "readline/promises"
 import * as path from "path"

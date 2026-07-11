@@ -1,4 +1,4 @@
-import { InvalidConfigurationError, log } from "builder-util"
+import { InvalidConfigurationError, log } from "@loongdotjs/builder-util"
 import { S3Options } from "builder-util-runtime"
 import { PublishContext } from ".."
 import { resolveAwsCredentials } from "./awsCredentials"

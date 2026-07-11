@@ -1,4 +1,4 @@
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import { BeforeBuildContext, Target } from "./core"
 import { ElectronBrandingOptions } from "./electron/ElectronFramework"
 import { PrepareApplicationStageDirectoryOptions } from "./Framework"
@@ -94,7 +94,7 @@ export interface CommonConfiguration {
    */
   readonly msiWrapped?: MsiWrappedOptions | null
   /**
-   * Squirrel.Windows installer options. Requires the `electron-builder-squirrel-windows` dependency.
+   * Squirrel.Windows installer options. Requires the `@loongdotjs/electron-builder-squirrel-windows` dependency.
    */
   readonly squirrelWindows?: SquirrelWindowsOptions | null
   /**

@@ -1,5 +1,5 @@
-import { Arch, Configuration, Platform } from "app-builder-lib"
-import { getArchSuffix } from "builder-util"
+import { Arch, Configuration, Platform } from "@loongdotjs/app-builder-lib"
+import { getArchSuffix } from "@loongdotjs/builder-util"
 import { GenericServerOptions, Nullish, S3Options } from "builder-util-runtime"
 import { AppImageUpdater, BaseUpdater, MacUpdater } from "electron-updater"
 import { EventEmitter } from "events"
@@ -12,7 +12,7 @@ import { NEW_VERSION_NUMBER, OLD_VERSION_NUMBER, tuneTestUpdater, writeUpdateCon
 import { mockForNodeRequire } from "vitest-mock-commonjs"
 import { ExpectStatic } from "vitest"
 import { createLocalServer } from "../helpers/launchAppCrossPlatform"
-import { ToolsetConfig } from "app-builder-lib/src/configuration"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
 
 export async function doBuild(
   expect: ExpectStatic,

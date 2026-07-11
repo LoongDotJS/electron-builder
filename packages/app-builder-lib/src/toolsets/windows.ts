@@ -1,4 +1,4 @@
-import { Arch, exists, resolveEnvToolsetPath } from "builder-util"
+import { Arch, exists, resolveEnvToolsetPath } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { stat } from "fs-extra"
 import * as os from "os"

@@ -1,7 +1,7 @@
-import { ToolsetConfig } from "app-builder-lib"
-import { isEmptyOrSpaces } from "builder-util/out/util"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib"
+import { isEmptyOrSpaces } from "@loongdotjs/builder-util/out/util"
 import { execSync } from "child_process"
-import { Arch } from "electron-builder"
+import { Arch } from "@loongdotjs/electron-builder"
 import { TestContext } from "vitest"
 import { optionsForFlakyE2E, runTest } from "./blackboxUpdateHelpers"
 

@@ -1,7 +1,7 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import * as path from "path"
 import { app, copyTestAsset, getFixtureDir } from "../helpers/packTester"
-import { ToolsetConfig } from "app-builder-lib"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib"
 
 export function registerPortableTests(toolsets: ToolsetConfig): void {
   // build in parallel - https://github.com/electron-userland/electron-builder/issues/1340#issuecomment-286061789

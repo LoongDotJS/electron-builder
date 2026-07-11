@@ -1,7 +1,7 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs"
 import { app } from "../helpers/packTester"
-import { ToolsetConfig } from "app-builder-lib"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib"
 
 const target = Platform.WINDOWS.createTarget("msi", Arch.x64)
 

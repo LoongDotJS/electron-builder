@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 
 export const trimStringWithWarn = (str: string, maxLength: number, warnMessage: string): string => {
   if (str.length <= maxLength) {

@@ -1,8 +1,8 @@
 import { describe, test } from "vitest"
-import { collectionMatchesAppDependencies, resolveFirstMatchingCollection } from "app-builder-lib/src/util/appFileCopier"
-import { PM } from "app-builder-lib/src/node-module-collector/packageManager"
-import type { NodeModuleInfo } from "app-builder-lib/src/util/packageDependencies"
-import type { ModuleManager } from "app-builder-lib/src/node-module-collector/moduleManager"
+import { collectionMatchesAppDependencies, resolveFirstMatchingCollection } from "@loongdotjs/app-builder-lib/src/util/appFileCopier"
+import { PM } from "@loongdotjs/app-builder-lib/src/node-module-collector/packageManager"
+import type { NodeModuleInfo } from "@loongdotjs/app-builder-lib/src/util/packageDependencies"
+import type { ModuleManager } from "@loongdotjs/app-builder-lib/src/node-module-collector/moduleManager"
 
 // ---------------------------------------------------------------------------
 // Helpers

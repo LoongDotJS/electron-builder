@@ -1,4 +1,4 @@
-import { Arch, copyDir, copyFile, exec, exists, InvalidConfigurationError, log } from "builder-util"
+import { Arch, copyDir, copyFile, exec, exists, InvalidConfigurationError, log } from "@loongdotjs/builder-util"
 import * as fs from "fs-extra"
 import * as path from "path"
 import { FileAssociation } from "../../options/FileAssociation"

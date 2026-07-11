@@ -1,5 +1,5 @@
-import { loadEnv } from "app-builder-lib/out/util/config/load"
-import { ExecError, InvalidConfigurationError, log } from "builder-util"
+import { loadEnv } from "@loongdotjs/app-builder-lib/out/util/config/load"
+import { ExecError, InvalidConfigurationError, log } from "@loongdotjs/builder-util"
 import { isCI } from "ci-info"
 import { readJson } from "fs-extra"
 import * as path from "path"

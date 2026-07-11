@@ -1,7 +1,7 @@
 import type { NotarizeOptionsNotaryTool, NotaryToolKeychainCredentials } from "@electron/notarize/lib/types"
 import type { PerFileSignOptions, SigningDistributionType, SignOptions } from "@electron/osx-sign/dist/cjs/types"
 import type { Identity } from "@electron/osx-sign/dist/cjs/util-identities"
-import { Arch, InvalidConfigurationError, log, statOrNull } from "builder-util"
+import { Arch, InvalidConfigurationError, log, statOrNull } from "@loongdotjs/builder-util"
 import { dynamicImport } from "../util/dynamicImport"
 import { Nullish } from "builder-util-runtime"
 import * as path from "path"

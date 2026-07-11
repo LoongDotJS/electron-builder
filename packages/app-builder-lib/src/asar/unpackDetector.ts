@@ -1,4 +1,4 @@
-import { FilterStats, log } from "builder-util"
+import { FilterStats, log } from "@loongdotjs/builder-util"
 import { isBinaryFileSync } from "isbinaryfile"
 import * as path from "path"
 import { ResolvedFileSet } from "../util/appFileCopier"

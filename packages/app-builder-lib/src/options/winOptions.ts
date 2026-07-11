@@ -7,7 +7,7 @@ export interface WindowsConfiguration extends PlatformSpecificBuildOptions {
    * The target package type: list of `nsis`, `nsis-web` (Web installer), `portable` ([portable]https://www.electron.build/nsis#portable) app without installation), `appx`, `msi`, `msi-wrapped`, `squirrel`, `7z`, `zip`, `tar.xz`, `tar.lz`, `tar.gz`, `tar.bz2`, `dir`.
    * AppX package can be built only on Windows 10.
    *
-   * To use Squirrel.Windows please install `electron-builder-squirrel-windows` dependency.
+   * To use Squirrel.Windows please install `@loongdotjs/electron-builder-squirrel-windows` dependency.
    *
    * @default nsis
    */

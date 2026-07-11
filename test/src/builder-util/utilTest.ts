@@ -1,5 +1,5 @@
-import { parseValidEnvVarUrl, resolveEnvShellValue } from "builder-util/out/envUtil"
-import { removePassword, filterSensitiveEnv, spawnAndWriteWithOutput, ExecError } from "builder-util"
+import { parseValidEnvVarUrl, resolveEnvShellValue } from "@loongdotjs/builder-util/out/envUtil"
+import { removePassword, filterSensitiveEnv, spawnAndWriteWithOutput, ExecError } from "@loongdotjs/builder-util"
 import { afterEach, vi } from "vitest"
 
 const testValue = "secretValue"

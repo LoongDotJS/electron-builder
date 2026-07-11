@@ -1,13 +1,13 @@
-import { exec, spawn } from "builder-util"
+import { exec, spawn } from "@loongdotjs/builder-util"
 import { CancellationToken } from "builder-util-runtime"
 import { SnapStoreOptions } from "builder-util-runtime/out/publishOptions"
-import { PublishContext, UploadTask } from "electron-publish"
+import { PublishContext, UploadTask } from "@loongdotjs/electron-publish"
 import { beforeEach, describe, test, vi } from "vitest"
 // Import from source so Vitest's vi.mock intercepts builder-util in the same module graph
 import { SnapStorePublisher } from "../../../../packages/electron-publish/src/snapStorePublisher"
 
-vi.mock("builder-util", async () => {
-  const actual = await vi.importActual<typeof import("builder-util")>("builder-util")
+vi.mock("@loongdotjs/builder-util", async () => {
+  const actual = await vi.importActual<typeof import("@loongdotjs/builder-util")>("@loongdotjs/builder-util")
   return { ...actual, exec: vi.fn(), spawn: vi.fn() }
 })
 

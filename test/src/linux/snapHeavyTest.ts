@@ -1,5 +1,5 @@
-import { Arch, Platform } from "app-builder-lib"
-import { log } from "builder-util"
+import { Arch, Platform } from "@loongdotjs/app-builder-lib"
+import { log } from "@loongdotjs/builder-util"
 import { spawnSync } from "child_process"
 import { chmodSync } from "fs"
 import { existsSync, readFileSync } from "fs"

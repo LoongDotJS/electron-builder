@@ -1,4 +1,4 @@
-import { InvalidConfigurationError } from "builder-util"
+import { InvalidConfigurationError } from "@loongdotjs/builder-util"
 import { copy, emptyDir } from "fs-extra"
 import { chmod, copyFile, mkdir, rename, writeFile } from "fs/promises"
 import * as https from "https"

@@ -1,8 +1,8 @@
 // archive() is @internal and stripped from type declarations by stripInternal:true.
 // Import as namespace then cast to any so vitest's TypeScript transform still resolves
 // the real source exports while TypeScript type-checking is satisfied.
-import * as archiveModule from "app-builder-lib/src/targets/archive"
-import { Platform } from "app-builder-lib/src/core"
+import * as archiveModule from "@loongdotjs/app-builder-lib/src/targets/archive"
+import { Platform } from "@loongdotjs/app-builder-lib/src/core"
 
 const { archive, compute7zCompressArgs, shouldPreserveSymlinks } = archiveModule as any
 import * as fs from "fs/promises"
@@ -312,7 +312,7 @@ describe.runIf(process.platform !== "win32")("archive() symlink preservation", {
     // Extract with the same 7za toolset binary and verify the symlink survived
     const extractDir = path.join(tmpDir, "extracted7z")
     await fs.mkdir(extractDir, { recursive: true })
-    const { getPath7za } = await import("app-builder-lib/src/toolsets/7zip")
+    const { getPath7za } = await import("@loongdotjs/app-builder-lib/src/toolsets/7zip")
     const { exec: cpExec } = await import("child_process")
     const { promisify } = await import("util")
     const execAsync = promisify(cpExec)

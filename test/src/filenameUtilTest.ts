@@ -1,4 +1,4 @@
-import { getCompleteExtname } from "builder-util/out/filename"
+import { getCompleteExtname } from "@loongdotjs/builder-util/out/filename"
 
 // [inputFilename, expectedExtname]
 const tests = [

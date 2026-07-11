@@ -12,7 +12,7 @@ import {
   statOrNull,
   use,
   walk,
-} from "builder-util"
+} from "@loongdotjs/builder-util"
 import { CURRENT_APP_INSTALLER_FILE_NAME, CURRENT_APP_PACKAGE_FILE_NAME, deepAssign, PackageFileInfo, UUID } from "builder-util-runtime"
 import _debug from "debug"
 import * as fs from "fs"

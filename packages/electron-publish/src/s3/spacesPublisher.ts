@@ -1,4 +1,4 @@
-import { InvalidConfigurationError, isEmptyOrSpaces } from "builder-util"
+import { InvalidConfigurationError, isEmptyOrSpaces } from "@loongdotjs/builder-util"
 import { SpacesOptions } from "builder-util-runtime"
 import { PublishContext } from "../"
 import { BaseS3Publisher, S3UploadConfig } from "./baseS3Publisher"

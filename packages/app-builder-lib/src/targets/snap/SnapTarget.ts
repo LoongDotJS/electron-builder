@@ -1,4 +1,4 @@
-import { Arch, log } from "builder-util"
+import { Arch, log } from "@loongdotjs/builder-util"
 import { deepAssign, SnapStoreOptions } from "builder-util-runtime"
 import * as path from "path"
 import { Configuration } from "../../configuration"

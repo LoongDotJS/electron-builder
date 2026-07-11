@@ -1,4 +1,4 @@
-import { FileTransformer, log } from "builder-util"
+import { FileTransformer, log } from "@loongdotjs/builder-util"
 import { safeStringifyJson } from "builder-util-runtime"
 import { Platform } from "./core"
 import { NODE_MODULES_PATTERN } from "./fileTransformer"

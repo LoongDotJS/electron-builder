@@ -1,12 +1,12 @@
-import { InvalidConfigurationError, executeFinally, log } from "builder-util"
+import { InvalidConfigurationError, executeFinally, log } from "@loongdotjs/builder-util"
 import { asArray } from "builder-util-runtime"
-import { PublishOptions } from "electron-publish"
+import { PublishOptions } from "@loongdotjs/electron-publish"
 import { Packager } from "./packager"
 import { PackagerOptions } from "./packagerApi"
 import { PublishManager } from "./publish/PublishManager"
 import { resolveFunction } from "./util/resolve"
 
-export { Arch, archFromString, getArchSuffix } from "builder-util"
+export { Arch, archFromString, getArchSuffix } from "@loongdotjs/builder-util"
 export { AppInfo } from "./appInfo"
 export {
   AfterExtractContext,
@@ -63,7 +63,7 @@ export { ArtifactBuildStarted, ArtifactCreated, PackagerOptions } from "./packag
 export { CommonNsisOptions, CustomNsisBinary, NsisOptions, NsisWebOptions, PortableOptions } from "./targets/nsis/nsisOptions"
 
 export { CancellationToken, ProgressInfo } from "builder-util-runtime"
-export { PublishOptions, UploadTask } from "electron-publish"
+export { PublishOptions, UploadTask } from "@loongdotjs/electron-publish"
 export { WindowsSignOptions } from "./codeSign/windowsCodeSign"
 export {
   CertificateFromStoreInfo,

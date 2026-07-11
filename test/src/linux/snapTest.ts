@@ -1,4 +1,4 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import { app, assertPack, snapTarget } from "../helpers/packTester"
 
 test.ifNotWindows("snap", ({ expect }) =>

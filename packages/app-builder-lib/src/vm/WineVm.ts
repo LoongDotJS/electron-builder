@@ -1,4 +1,4 @@
-import { exec, ExtraSpawnOptions } from "builder-util"
+import { exec, ExtraSpawnOptions } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { ExecFileOptions, SpawnOptions } from "child_process"
 import * as path from "path"

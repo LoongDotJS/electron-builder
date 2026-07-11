@@ -1,4 +1,4 @@
-import { InvalidConfigurationError, isEmptyOrSpaces, log } from "builder-util"
+import { InvalidConfigurationError, isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { readFile, readJson, readJsonSync } from "fs-extra"
 import * as path from "path"
@@ -130,14 +130,16 @@ function checkDependencies(dependencies: Record<string, string> | Nullish, error
     }
   }
 
-  const swVersion = dependencies["electron-builder-squirrel-windows"]
+  const swVersion = dependencies["@loongdotjs/electron-builder-squirrel-windows"]
   if (swVersion != null && !versionSatisfies(swVersion, ">=20.32.0")) {
-    errors.push(`At least electron-builder-squirrel-windows 20.32.0 is required by current electron-builder version. Please set electron-builder-squirrel-windows to "^20.32.0"`)
+    errors.push(
+      `At least @loongdotjs/electron-builder-squirrel-windows 20.32.0 is required by current electron-builder version. Please set @loongdotjs/electron-builder-squirrel-windows to "^20.32.0"`
+    )
   }
 
   const deps = ["electron", "electron-prebuilt", "electron-rebuild"]
   if (process.env.ALLOW_ELECTRON_BUILDER_AS_PRODUCTION_DEPENDENCY !== "true") {
-    deps.push("electron-builder")
+    deps.push("electron-builder", "@loongdotjs/electron-builder")
   }
   for (const name of deps) {
     if (name in dependencies) {

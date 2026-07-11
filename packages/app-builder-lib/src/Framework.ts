@@ -1,4 +1,4 @@
-import { FileTransformer } from "builder-util"
+import { FileTransformer } from "@loongdotjs/builder-util"
 import { AsarIntegrity } from "./asar/integrity"
 import { AfterPackContext, ElectronPlatformName, Platform, PlatformPackager } from "./index"
 

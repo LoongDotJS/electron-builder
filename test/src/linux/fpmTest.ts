@@ -1,4 +1,4 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import { app, EXTENDED_TIMEOUT } from "../helpers/packTester"
 
 // "apk" is very slow, don't test for now

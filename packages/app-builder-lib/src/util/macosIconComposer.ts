@@ -1,6 +1,6 @@
 // Adapted from https://github.com/electron/packager/pull/1806
 
-import { spawn } from "builder-util"
+import { spawn } from "@loongdotjs/builder-util"
 import * as fs from "fs/promises"
 import * as os from "node:os"
 import * as path from "node:path"

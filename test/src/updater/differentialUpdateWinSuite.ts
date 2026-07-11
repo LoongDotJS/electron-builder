@@ -1,11 +1,11 @@
-import { Arch, Platform } from "app-builder-lib"
-import { archFromString, getArchSuffix } from "builder-util"
+import { Arch, Platform } from "@loongdotjs/app-builder-lib"
+import { archFromString, getArchSuffix } from "@loongdotjs/builder-util"
 import * as path from "path"
 import { move } from "fs-extra"
 import { TmpDir } from "temp-file"
 import { OLD_VERSION_NUMBER, testAppCacheDirName } from "../helpers/updaterTestUtil"
 import { NsisUpdater } from "electron-updater"
-import { ToolsetConfig } from "app-builder-lib/src/configuration"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
 import { doBuild, getTestUpdaterCacheDir, testBlockMap } from "./differentialUpdateHelpers"
 
 export function registerDifferentialWinTests(toolsets: ToolsetConfig): void {

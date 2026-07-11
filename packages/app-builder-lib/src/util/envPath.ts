@@ -1,4 +1,4 @@
-import { isEmptyOrSpaces, log } from "builder-util"
+import { isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import * as path from "path"
 
 export function validateEnvValue(envVarName: string): string | null {

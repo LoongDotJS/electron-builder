@@ -1,6 +1,6 @@
+import { resolveEnvToolsetPath } from "@loongdotjs/builder-util"
 import { chmod } from "fs-extra"
 import * as path from "path"
-import { resolveEnvToolsetPath } from "builder-util"
 import { downloadBuilderToolset } from "../util/electronGet"
 
 const checksums = {
@@ -57,6 +57,11 @@ async function resolve(): Promise<string> {
   const envExec = await resolveEnvToolsetPath("ELECTRON_BUILDER_7ZIP_PATH", "file")
   if (envExec != null) {
     return envExec
+  }
+  if (process.arch === "loong64") {
+    const path7za = path.join(path.dirname(require.resolve("@loongdotjs/7zip-bin/package.json")), "linux", "loong64", "7za")
+    await chmod(path7za, 0o755)
+    return path7za
   }
 
   const filename = getFilename()

@@ -119,12 +119,15 @@ function generateApiIndex(siteDir: string): void {
     .sort()
 
   const rows = pkgNames.map(pkg => {
+    const scopedPrefix = "@loongdotjs."
+    const packageDir = pkg.startsWith(scopedPrefix) ? pkg.slice(scopedPrefix.length) : pkg
+    const packageName = pkg.startsWith(scopedPrefix) ? `@loongdotjs/${packageDir}` : pkg
     let desc = ""
     try {
-      const pkgJson = JSON.parse(readFileSync(join(root, "packages", pkg, "package.json"), "utf-8")) as { description?: string }
+      const pkgJson = JSON.parse(readFileSync(join(root, "packages", packageDir, "package.json"), "utf-8")) as { description?: string }
       desc = pkgJson.description ?? ""
     } catch {}
-    return `| [\`${pkg}\`](./${pkg}) | ${desc} |`
+    return `| [\`${packageName}\`](./${pkg}) | ${desc} |`
   })
 
   const content = ["# API Reference", "", "| Package | Description |", "|---|---|", ...rows, ""].join("\n")

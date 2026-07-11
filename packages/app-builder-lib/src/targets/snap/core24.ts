@@ -1,4 +1,4 @@
-import { Arch, archFromString, copyDir, InvalidConfigurationError, log, removeNullish, toLinuxArchString } from "builder-util"
+import { Arch, archFromString, copyDir, InvalidConfigurationError, log, removeNullish, toLinuxArchString } from "@loongdotjs/builder-util"
 import { deepAssign, isValidKey, Nullish } from "builder-util-runtime"
 import { chmod, copy, mkdir, readdir, remove, writeFile } from "fs-extra"
 import * as yaml from "js-yaml"

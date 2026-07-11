@@ -1,4 +1,4 @@
-import { Arch, log, serializeToYaml } from "builder-util"
+import { Arch, log, serializeToYaml } from "@loongdotjs/builder-util"
 import { outputFile } from "fs-extra"
 import { Lazy } from "lazy-val"
 import * as path from "path"

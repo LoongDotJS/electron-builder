@@ -1,4 +1,4 @@
-import { Arch, InvalidConfigurationError, log } from "builder-util"
+import { Arch, InvalidConfigurationError, log } from "@loongdotjs/builder-util"
 import { outputFile, readFile } from "fs-extra"
 import * as yaml from "js-yaml"
 import * as path from "path"

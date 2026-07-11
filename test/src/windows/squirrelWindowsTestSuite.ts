@@ -1,8 +1,8 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import * as path from "path"
 import { CheckingWinPackager } from "../helpers/CheckingPackager"
 import { app, assertPack, copyTestAsset } from "../helpers/packTester"
-import { ToolsetConfig } from "app-builder-lib"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib"
 
 export function registerSquirrelWindowsTests(toolsets: ToolsetConfig): void {
   test("Squirrel.Windows", ({ expect }) =>

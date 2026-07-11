@@ -1,5 +1,5 @@
-import { WindowsSignToolManager } from "app-builder-lib"
-import { WindowsSignTaskConfiguration } from "app-builder-lib/out/codeSign/windowsSignToolManager"
+import { WindowsSignToolManager } from "@loongdotjs/app-builder-lib"
+import { WindowsSignTaskConfiguration } from "@loongdotjs/app-builder-lib/out/codeSign/windowsSignToolManager"
 import { mkdtemp, rm, writeFile } from "fs/promises"
 import { tmpdir } from "os"
 import * as path from "path"

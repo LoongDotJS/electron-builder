@@ -1,4 +1,4 @@
-import { exec, safeStringifyJson, unlinkIfExists } from "builder-util"
+import { exec, safeStringifyJson, unlinkIfExists } from "@loongdotjs/builder-util"
 import { emptyDir } from "fs-extra"
 import * as fs from "fs/promises"
 import { homedir } from "os"

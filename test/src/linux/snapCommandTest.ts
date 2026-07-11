@@ -1,5 +1,5 @@
 import { describe } from "vitest"
-import { buildSnapCommandLauncherScript, shellQuote } from "app-builder-lib/out/targets/snap/snapCommand.js"
+import { buildSnapCommandLauncherScript, shellQuote } from "@loongdotjs/app-builder-lib/out/targets/snap/snapCommand.js"
 
 // Pure unit tests for the snap launcher-script helpers shared by the snap cores.
 // Full snap build flows are exercised by snapcraftTest.ts.

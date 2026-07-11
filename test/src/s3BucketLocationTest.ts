@@ -5,14 +5,14 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 
 // Must be hoisted before the module under test is imported so vitest intercepts the require.
 vi.mock("https")
-vi.mock("electron-publish/src/s3/awsCredentials", () => ({
+vi.mock("@loongdotjs/electron-publish/src/s3/awsCredentials", () => ({
   resolveAwsCredentials: vi.fn().mockReturnValue({ accessKeyId: "test-key", secretAccessKey: "test-secret" }),
 }))
 
 // Import after mock is in place.
 import * as https from "https"
-import { resolveAwsCredentials } from "electron-publish/src/s3/awsCredentials"
-import { getBucketLocation } from "electron-publish/src/s3/bucketLocation"
+import { resolveAwsCredentials } from "@loongdotjs/electron-publish/src/s3/awsCredentials"
+import { getBucketLocation } from "@loongdotjs/electron-publish/src/s3/bucketLocation"
 
 // ─── Mock helper ─────────────────────────────────────────────────────────────
 
@@ -186,7 +186,9 @@ describe("resolveAwsCredentials", () => {
   })
 
   it("returns env-var credentials when AWS_ACCESS_KEY_ID is set", async () => {
-    const { resolveAwsCredentials: realResolve } = await vi.importActual<typeof import("electron-publish/src/s3/awsCredentials")>("electron-publish/src/s3/awsCredentials")
+    const { resolveAwsCredentials: realResolve } = await vi.importActual<typeof import("@loongdotjs/electron-publish/src/s3/awsCredentials")>(
+      "@loongdotjs/electron-publish/src/s3/awsCredentials"
+    )
     vi.stubEnv("AWS_ACCESS_KEY_ID", "AKIAENV")
     vi.stubEnv("AWS_SECRET_ACCESS_KEY", "env-secret")
     vi.stubEnv("AWS_SESSION_TOKEN", "env-token")
@@ -196,7 +198,9 @@ describe("resolveAwsCredentials", () => {
   })
 
   it("includes sessionToken only when AWS_SESSION_TOKEN is set", async () => {
-    const { resolveAwsCredentials: realResolve } = await vi.importActual<typeof import("electron-publish/src/s3/awsCredentials")>("electron-publish/src/s3/awsCredentials")
+    const { resolveAwsCredentials: realResolve } = await vi.importActual<typeof import("@loongdotjs/electron-publish/src/s3/awsCredentials")>(
+      "@loongdotjs/electron-publish/src/s3/awsCredentials"
+    )
     vi.stubEnv("AWS_ACCESS_KEY_ID", "AKIAENV")
     vi.stubEnv("AWS_SECRET_ACCESS_KEY", "env-secret")
     vi.stubEnv("AWS_SESSION_TOKEN", "")
@@ -206,7 +210,9 @@ describe("resolveAwsCredentials", () => {
   })
 
   it("returns undefined when no credentials are configured", async () => {
-    const { resolveAwsCredentials: realResolve } = await vi.importActual<typeof import("electron-publish/src/s3/awsCredentials")>("electron-publish/src/s3/awsCredentials")
+    const { resolveAwsCredentials: realResolve } = await vi.importActual<typeof import("@loongdotjs/electron-publish/src/s3/awsCredentials")>(
+      "@loongdotjs/electron-publish/src/s3/awsCredentials"
+    )
     vi.stubEnv("AWS_ACCESS_KEY_ID", "")
     vi.stubEnv("AWS_SECRET_ACCESS_KEY", "")
     // Point HOME to a non-existent dir so there's no ~/.aws/credentials

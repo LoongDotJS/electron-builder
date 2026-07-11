@@ -1,6 +1,6 @@
-import { getWineToolset } from "app-builder-lib/out/toolsets/wine"
-import type { ToolsetConfig } from "app-builder-lib/src/configuration"
-import { exists } from "builder-util"
+import { getWineToolset } from "@loongdotjs/app-builder-lib/out/toolsets/wine"
+import type { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
+import { exists } from "@loongdotjs/builder-util"
 import * as path from "path"
 
 export function registerWineToolsetTests(toolsets: ToolsetConfig): void {

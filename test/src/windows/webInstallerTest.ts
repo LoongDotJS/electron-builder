@@ -1,4 +1,4 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { listArchiveEntries, listArchiveMethods, NON_DECODABLE_NSIS_FILTER } from "../helpers/archiveHelper"

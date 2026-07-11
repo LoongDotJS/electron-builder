@@ -1,4 +1,4 @@
-import { exec, exists, InvalidConfigurationError, resolveEnvToolsetPath, sanitizeDirPath } from "builder-util"
+import { exec, exists, InvalidConfigurationError, resolveEnvToolsetPath, sanitizeDirPath } from "@loongdotjs/builder-util"
 import * as path from "path"
 import { downloadBuilderToolset } from "../util/electronGet"
 

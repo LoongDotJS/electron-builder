@@ -1,4 +1,4 @@
-import { InvalidConfigurationError } from "builder-util"
+import { InvalidConfigurationError } from "@loongdotjs/builder-util"
 
 /**
  * Validates that a value is safe to embed in a double-quoted shell string.

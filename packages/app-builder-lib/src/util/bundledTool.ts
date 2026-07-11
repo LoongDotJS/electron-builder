@@ -1,4 +1,4 @@
-import { stripSensitiveEnvVars } from "builder-util"
+import { stripSensitiveEnvVars } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 
 export interface ToolInfo {

@@ -3,7 +3,7 @@ import * as asn1js from "asn1js"
 import * as pkijs from "pkijs"
 import { Crypto as PeculiarCrypto } from "@peculiar/webcrypto"
 import { readFile } from "fs-extra"
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 
 // OID for codeSigning extended key usage
 const CODE_SIGNING_OID = "1.3.6.1.5.5.7.3.3"

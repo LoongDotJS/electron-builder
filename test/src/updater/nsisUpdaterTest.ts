@@ -1,5 +1,5 @@
 import { BitbucketOptions, GenericServerOptions, GithubOptions, GitlabOptions, KeygenOptions, S3Options, SpacesOptions } from "builder-util-runtime"
-import { BitbucketPublisher } from "electron-publish"
+import { BitbucketPublisher } from "@loongdotjs/electron-publish"
 import { UpdateCheckResult } from "electron-updater"
 import { outputFile } from "fs-extra"
 import { tmpdir } from "os"

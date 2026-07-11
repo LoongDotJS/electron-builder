@@ -6,20 +6,20 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 // ─── Hoist mocks before any module imports ────────────────────────────────────
 
 vi.mock("https")
-vi.mock("electron-publish/src/s3/awsCredentials", () => ({
+vi.mock("@loongdotjs/electron-publish/src/s3/awsCredentials", () => ({
   resolveAwsCredentials: vi.fn().mockReturnValue({ accessKeyId: "test-key", secretAccessKey: "test-secret" }),
 }))
 
 // ─── Imports after mocks ──────────────────────────────────────────────────────
 
 import * as https from "https"
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import { CancellationToken, S3Options, SpacesOptions } from "builder-util-runtime"
-import { PublishContext, UploadTask } from "electron-publish"
-import { resolveAwsCredentials } from "electron-publish/src/s3/awsCredentials"
-import { S3Publisher } from "electron-publish/src/s3/s3Publisher"
-import { SpacesPublisher } from "electron-publish/src/s3/spacesPublisher"
-import { getS3ContentType } from "electron-publish/src/s3/s3UploadHelper"
+import { PublishContext, UploadTask } from "@loongdotjs/electron-publish"
+import { resolveAwsCredentials } from "@loongdotjs/electron-publish/src/s3/awsCredentials"
+import { S3Publisher } from "@loongdotjs/electron-publish/src/s3/s3Publisher"
+import { SpacesPublisher } from "@loongdotjs/electron-publish/src/s3/spacesPublisher"
+import { getS3ContentType } from "@loongdotjs/electron-publish/src/s3/s3UploadHelper"
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 

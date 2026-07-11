@@ -1,5 +1,5 @@
-import { createKeychain, removeKeychain } from "app-builder-lib/out/codeSign/macCodeSign"
-import { removePassword, TmpDir } from "builder-util"
+import { createKeychain, removeKeychain } from "@loongdotjs/app-builder-lib/out/codeSign/macCodeSign"
+import { removePassword, TmpDir } from "@loongdotjs/builder-util"
 import { MAC_CSC_LINK } from "../helpers/codeSignData"
 import { afterEach } from "vitest"
 

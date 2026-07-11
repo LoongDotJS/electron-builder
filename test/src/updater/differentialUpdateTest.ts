@@ -1,5 +1,5 @@
-import { Arch, Platform } from "app-builder-lib"
-import { getArchSuffix } from "builder-util"
+import { Arch, Platform } from "@loongdotjs/app-builder-lib"
+import { getArchSuffix } from "@loongdotjs/builder-util"
 import { move } from "fs-extra"
 import * as path from "path"
 import { TmpDir } from "temp-file"

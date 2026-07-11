@@ -1,4 +1,4 @@
-import { Arch, Configuration, DIR_TARGET, Platform } from "app-builder-lib"
+import { Arch, Configuration, DIR_TARGET, Platform } from "@loongdotjs/app-builder-lib"
 import { deepAssign } from "builder-util-runtime"
 import { TmpDir } from "temp-file"
 import { assertPack, modifyPackageJson } from "./helpers/packTester"

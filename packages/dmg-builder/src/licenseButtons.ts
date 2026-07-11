@@ -1,5 +1,5 @@
-import { PlatformPackager } from "app-builder-lib"
-import { getLicenseAssets } from "app-builder-lib/out/util/license"
+import { PlatformPackager } from "@loongdotjs/app-builder-lib"
+import { getLicenseAssets } from "@loongdotjs/app-builder-lib/out/util/license"
 
 export interface LicenseButtonsFile {
   file: string

@@ -1,4 +1,4 @@
-import { Arch, asArray, log, walk } from "builder-util"
+import { Arch, asArray, log, walk } from "@loongdotjs/builder-util"
 import { deepAssign, UUID } from "builder-util-runtime"
 import { createHash } from "crypto"
 import * as ejs from "ejs"

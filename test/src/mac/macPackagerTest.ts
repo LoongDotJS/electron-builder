@@ -1,5 +1,5 @@
-import { copyOrLinkFile, exec } from "builder-util"
-import { Arch, createTargets, DIR_TARGET, Platform } from "electron-builder"
+import { copyOrLinkFile, exec } from "@loongdotjs/builder-util"
+import { Arch, createTargets, DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import * as path from "path"
 import { assertThat } from "../helpers/fileAssert"

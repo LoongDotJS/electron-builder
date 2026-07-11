@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { readFile, writeFile } from "fs/promises"
 import * as path from "path"
 import { NtExecutable, NtExecutableResource, Resource } from "resedit"

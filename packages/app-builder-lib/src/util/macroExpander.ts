@@ -1,4 +1,4 @@
-import { InvalidConfigurationError, log } from "builder-util"
+import { InvalidConfigurationError, log } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { AppInfo } from "../appInfo"
 

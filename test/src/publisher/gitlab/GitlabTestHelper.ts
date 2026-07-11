@@ -1,4 +1,4 @@
-import { httpExecutor, log } from "builder-util"
+import { httpExecutor, log } from "@loongdotjs/builder-util"
 import { GitlabReleaseInfo, HttpError } from "builder-util-runtime"
 
 /**

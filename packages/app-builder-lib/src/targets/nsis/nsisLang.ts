@@ -1,4 +1,4 @@
-import { asArray } from "builder-util"
+import { asArray } from "@loongdotjs/builder-util"
 import _debug from "debug"
 import { outputFile, readFile } from "fs-extra"
 import { load } from "js-yaml"

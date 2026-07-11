@@ -1,4 +1,4 @@
-import { replaceDefault as _replaceDefault, Arch, copyDir, exec, log, serializeToYaml, toLinuxArchString } from "builder-util"
+import { replaceDefault as _replaceDefault, Arch, copyDir, exec, log, serializeToYaml, toLinuxArchString } from "@loongdotjs/builder-util"
 import { asArray, deepAssign, isValidKey, Nullish } from "builder-util-runtime"
 import { outputFile, readFile } from "fs-extra"
 import { chmod, copyFile, mkdir, readdir, rename, rm, writeFile } from "fs/promises"
@@ -419,6 +419,8 @@ export class SnapCoreLegacy extends SnapCore<SnapOptions> {
         return "arm-linux-gnueabihf"
       case Arch.arm64:
         return "aarch64-linux-gnu"
+      case Arch.loong64:
+        return "loong64-linux-gnu"
 
       default:
         throw new Error(`Unsupported arch ${arch}`)

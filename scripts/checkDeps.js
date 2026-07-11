@@ -33,7 +33,7 @@ async function check(projectDir, devPackageData) {
   let unusedDependencies = result.dependencies
   if (unusedDependencies.length > 0) {
     if (packageName === "electron-builder") {
-      unusedDependencies = unusedDependencies.filter(it => it !== "dmg-builder")
+      unusedDependencies = unusedDependencies.filter(it => it !== "@loongdotjs/dmg-builder")
     }
     if (packageName === "app-builder-lib") {
       // @electron/universal is loaded via dynamicImport() which depcheck cannot statically detect
@@ -64,14 +64,14 @@ async function check(projectDir, devPackageData) {
   }
 
   if (packageName === "electron-builder") {
-    delete result.missing["electron-publish"]
+    delete result.missing["@loongdotjs/electron-publish"]
   }
 
   for (const name of Object.keys(result.missing)) {
     if (
-      name === "electron-builder-squirrel-windows" ||
+      name === "@loongdotjs/electron-builder-squirrel-windows" ||
       name === "electron-webpack" ||
-      (packageName === "app-builder-lib" && (name === "dmg-builder" || knownMissedDependencies.has(name) || name.startsWith("@babel/")))
+      (packageName === "app-builder-lib" && (name === "@loongdotjs/dmg-builder" || knownMissedDependencies.has(name) || name.startsWith("@babel/")))
     ) {
       delete result.missing[name]
     }

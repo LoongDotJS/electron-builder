@@ -1,11 +1,11 @@
-import { Platform } from "app-builder-lib"
-import { PM } from "app-builder-lib/src/node-module-collector"
+import { Platform } from "@loongdotjs/app-builder-lib"
+import { PM } from "@loongdotjs/app-builder-lib/src/node-module-collector"
 import { copyFile, outputFile, rm, writeFile } from "fs-extra"
 import * as path from "path"
 import { assertThat } from "./helpers/fileAssert"
 import { app, assertPack, getFixtureDir, getPackageManagerWithVersion, linuxDirTarget, modifyPackageJson, verifyAsarFileTree } from "./helpers/packTester"
 import { ELECTRON_VERSION } from "./helpers/testConfig"
-import { isEmptyOrSpaces, spawn } from "builder-util"
+import { isEmptyOrSpaces, spawn } from "@loongdotjs/builder-util"
 import * as which from "which"
 
 const yarnVersion = getPackageManagerWithVersion(PM.YARN).prepareEntry

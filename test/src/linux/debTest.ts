@@ -1,4 +1,4 @@
-import { Arch, Platform } from "electron-builder"
+import { Arch, Platform } from "@loongdotjs/electron-builder"
 import * as fs from "fs/promises"
 import { app, execShell, getArExecutable, getTarExecutable, resolveDebMember } from "../helpers/packTester"
 

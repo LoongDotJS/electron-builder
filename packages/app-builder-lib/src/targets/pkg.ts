@@ -1,4 +1,4 @@
-import { Arch, debug, exec, statOrNull, use } from "builder-util"
+import { Arch, debug, exec, statOrNull, use } from "@loongdotjs/builder-util"
 import { Nullish } from "builder-util-runtime"
 import { readdirSync } from "fs"
 import { readFile, unlink, writeFile } from "fs/promises"

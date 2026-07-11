@@ -1,4 +1,4 @@
-import { log, PADDING } from "builder-util"
+import { log, PADDING } from "@loongdotjs/builder-util"
 import { ProgressCallbackTransform, PublishProvider } from "builder-util-runtime"
 import * as chalk from "chalk"
 import { createReadStream, Stats } from "fs-extra"

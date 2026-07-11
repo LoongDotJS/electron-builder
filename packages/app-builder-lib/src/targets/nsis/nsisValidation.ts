@@ -1,4 +1,4 @@
-import { ExecError, statOrNull } from "builder-util"
+import { ExecError, statOrNull } from "@loongdotjs/builder-util"
 import type { Defines } from "./Defines"
 
 /**

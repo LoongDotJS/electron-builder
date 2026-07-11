@@ -1,4 +1,4 @@
-import { exec, log, retry, spawnAndWriteWithOutput } from "builder-util"
+import { exec, log, retry, spawnAndWriteWithOutput } from "@loongdotjs/builder-util"
 
 /**
  * Table of hdiutil error codes that are transient and can be retried.

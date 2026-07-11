@@ -1,5 +1,5 @@
 import type { SignOptions } from "@electron/osx-sign/dist/cjs/types"
-import { copyFile, exec, Fields, InvalidConfigurationError, isEmptyOrSpaces, isEnvTrue, isPullRequest, log, Logger, retry, TmpDir, unlinkIfExists } from "builder-util"
+import { copyFile, exec, Fields, InvalidConfigurationError, isEmptyOrSpaces, isEnvTrue, isPullRequest, log, Logger, retry, TmpDir, unlinkIfExists } from "@loongdotjs/builder-util"
 import { dynamicImport } from "../util/dynamicImport"
 import { Nullish } from "builder-util-runtime"
 import { createHash, randomBytes } from "crypto"

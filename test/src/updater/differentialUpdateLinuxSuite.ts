@@ -1,5 +1,5 @@
-import { Arch } from "app-builder-lib"
-import { ToolsetConfig } from "app-builder-lib/src/configuration"
+import { Arch } from "@loongdotjs/app-builder-lib"
+import { ToolsetConfig } from "@loongdotjs/app-builder-lib/src/configuration"
 import { testLinux } from "./differentialUpdateHelpers"
 
 const supportedArchs = [

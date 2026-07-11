@@ -1,5 +1,5 @@
-import { TmpDir, archFromString, copyDir } from "builder-util"
-import { DIR_TARGET, Platform } from "electron-builder"
+import { TmpDir, archFromString, copyDir } from "@loongdotjs/builder-util"
+import { DIR_TARGET, Platform } from "@loongdotjs/electron-builder"
 import { outputFile } from "fs-extra"
 import * as fs from "fs/promises"
 import * as path from "path"

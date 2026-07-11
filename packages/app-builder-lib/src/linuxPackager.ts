@@ -1,5 +1,5 @@
-import { Arch } from "builder-util"
-import { sanitizeFileName } from "builder-util/out/filename"
+import { Arch } from "@loongdotjs/builder-util"
+import { sanitizeFileName } from "@loongdotjs/builder-util/out/filename"
 import { DIR_TARGET, Platform, Target } from "./core"
 import { LinuxConfiguration } from "./options/linuxOptions"
 import { Packager } from "./packager"
@@ -81,6 +81,8 @@ export function toAppImageOrSnapArch(arch: Arch): string {
       return "arm"
     case Arch.arm64:
       return "arm_aarch64"
+    case Arch.loong64:
+      return "loong64"
 
     default:
       throw new Error(`Unsupported arch ${arch}`)

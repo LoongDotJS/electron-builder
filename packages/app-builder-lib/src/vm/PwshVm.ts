@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { Lazy } from "lazy-val"
 import { isPwshAvailable, VmManager } from "./vm"
 

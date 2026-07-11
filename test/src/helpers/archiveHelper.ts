@@ -1,4 +1,4 @@
-import { getPath7za } from "app-builder-lib/src/toolsets/7zip"
+import { getPath7za } from "@loongdotjs/app-builder-lib/src/toolsets/7zip"
 import { execFile } from "child_process"
 import { promisify } from "util"
 

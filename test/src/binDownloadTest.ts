@@ -1,13 +1,13 @@
 import * as os from "os"
 import * as path from "path"
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
-import { getBin, getBinFromCustomLoc, getBinFromUrl } from "app-builder-lib/src/binDownload"
-import { downloadBuilderToolset } from "app-builder-lib/src/util/electronGet"
+import { getBin, getBinFromCustomLoc, getBinFromUrl } from "@loongdotjs/app-builder-lib/src/binDownload"
+import { downloadBuilderToolset } from "@loongdotjs/app-builder-lib/src/util/electronGet"
 
 // vi.mock is hoisted before imports by vitest. Importing from `src/` (TypeScript
 // sources) ensures vitest's transform pipeline handles module interception.
 // We inline getBinariesMirrorUrl so we don't need importActual.
-vi.mock("app-builder-lib/src/util/electronGet", () => ({
+vi.mock("@loongdotjs/app-builder-lib/src/util/electronGet", () => ({
   downloadBuilderToolset: vi.fn(),
   getBinariesMirrorUrl: vi.fn((repo = "electron-userland/electron-builder-binaries") => {
     for (const k of [

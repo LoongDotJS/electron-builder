@@ -362,6 +362,7 @@
         "arm64",
         "armv7l",
         "ia32",
+        "loong64",
         "universal",
         "x64"
       ],
@@ -8252,6 +8253,7 @@
                 "arm64",
                 "armv7l",
                 "ia32",
+                "loong64",
                 "universal",
                 "x64"
               ],
@@ -8787,7 +8789,7 @@
             }
           ],
           "default": "nsis",
-          "description": "The target package type: list of `nsis`, `nsis-web` (Web installer), `portable` ([portable]https://www.electron.build/nsis#portable) app without installation), `appx`, `msi`, `msi-wrapped`, `squirrel`, `7z`, `zip`, `tar.xz`, `tar.lz`, `tar.gz`, `tar.bz2`, `dir`.\nAppX package can be built only on Windows 10.\n\nTo use Squirrel.Windows please install `electron-builder-squirrel-windows` dependency."
+          "description": "The target package type: list of `nsis`, `nsis-web` (Web installer), `portable` ([portable]https://www.electron.build/nsis#portable) app without installation), `appx`, `msi`, `msi-wrapped`, `squirrel`, `7z`, `zip`, `tar.xz`, `tar.lz`, `tar.gz`, `tar.bz2`, `dir`.\nAppX package can be built only on Windows 10.\n\nTo use Squirrel.Windows please install `@loongdotjs/electron-builder-squirrel-windows` dependency."
         },
         "verifyUpdateCodeSignature": {
           "default": true,
@@ -9830,7 +9832,7 @@
           "type": "null"
         }
       ],
-      "description": "Squirrel.Windows installer options. Requires the `electron-builder-squirrel-windows` dependency."
+      "description": "Squirrel.Windows installer options. Requires the `@loongdotjs/electron-builder-squirrel-windows` dependency."
     },
     "target": {
       "anyOf": [

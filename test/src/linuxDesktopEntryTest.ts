@@ -1,4 +1,4 @@
-import { buildExecArgs } from "app-builder-lib/src/targets/LinuxTargetHelper"
+import { buildExecArgs } from "@loongdotjs/app-builder-lib/src/targets/LinuxTargetHelper"
 
 describe("buildExecArgs", () => {
   test("passes a quoted arg through verbatim (no outer wrapping, no escaping)", ({ expect }) => {

@@ -1,4 +1,4 @@
-import { expandMacro } from "app-builder-lib/out/util/macroExpander"
+import { expandMacro } from "@loongdotjs/app-builder-lib/out/util/macroExpander"
 
 const appInfoStub: any = {
   sanitizedProductName: "1",

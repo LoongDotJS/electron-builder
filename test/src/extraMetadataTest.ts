@@ -1,6 +1,6 @@
-import { readAsarJson } from "app-builder-lib/out/asar/asar"
-import { Platform } from "electron-builder"
-import { coerceTypes } from "electron-builder/out/builder"
+import { readAsarJson } from "@loongdotjs/app-builder-lib/out/asar/asar"
+import { Platform } from "@loongdotjs/electron-builder"
+import { coerceTypes } from "@loongdotjs/electron-builder/out/builder"
 import { readJson } from "fs-extra"
 import * as path from "path"
 import { assertThat } from "./helpers/fileAssert"
@@ -56,7 +56,7 @@ test("extra metadata (no asar)", ({ expect }) => createExtraMetadataTest(expect,
 
 test("cli", ({ expect }) => {
   // because these methods are internal
-  const { configureBuildCommand, normalizeOptions } = require("electron-builder/out/builder")
+  const { configureBuildCommand, normalizeOptions } = require("@loongdotjs/electron-builder/out/builder")
   const yargs = require("yargs")
     .strict()
     .fail((message: string, error: Error | null) => {

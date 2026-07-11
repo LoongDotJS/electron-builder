@@ -1,11 +1,11 @@
 #! /usr/bin/env node
 
-import { AppInfo, CancellationToken, Packager, PackagerOptions, PublishManager, PublishOptions, UploadTask, checkBuildRequestOptions } from "app-builder-lib"
-import { Publish } from "app-builder-lib/out/core"
-import { computeSafeArtifactNameIfNeeded } from "app-builder-lib/out/platformPackager"
-import { getConfig } from "app-builder-lib/out/util/config/config"
-import { InvalidConfigurationError, archFromString, log, printErrorAndExit } from "builder-util"
-import { PublishPolicy } from "electron-publish"
+import { AppInfo, CancellationToken, Packager, PackagerOptions, PublishManager, PublishOptions, UploadTask, checkBuildRequestOptions } from "@loongdotjs/app-builder-lib"
+import { Publish } from "@loongdotjs/app-builder-lib/out/core"
+import { computeSafeArtifactNameIfNeeded } from "@loongdotjs/app-builder-lib/out/platformPackager"
+import { getConfig } from "@loongdotjs/app-builder-lib/out/util/config/config"
+import { InvalidConfigurationError, archFromString, log, printErrorAndExit } from "@loongdotjs/builder-util"
+import { PublishPolicy } from "@loongdotjs/electron-publish"
 import * as chalk from "chalk"
 import * as path from "path"
 import * as yargs from "yargs"

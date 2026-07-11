@@ -1,4 +1,4 @@
-import { validateSchema } from "app-builder-lib/out/util/config/schemaValidator"
+import { validateSchema } from "@loongdotjs/app-builder-lib/out/util/config/schemaValidator"
 import { describe, expect, it } from "vitest"
 
 const simpleSchema = {

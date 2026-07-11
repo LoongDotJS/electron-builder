@@ -14,8 +14,8 @@ import {
   downloadElectronArtifact,
   getCacheDirectory,
   getBinariesMirrorUrl,
-} from "app-builder-lib/out/util/electronGet"
-import { CacheState } from "app-builder-lib/out/util/cacheState"
+} from "@loongdotjs/app-builder-lib/out/util/electronGet"
+import { CacheState } from "@loongdotjs/app-builder-lib/out/util/cacheState"
 import { ELECTRON_VERSION } from "./helpers/testConfig"
 
 // ─── Test helpers ─────────────────────────────────────────────────────────────

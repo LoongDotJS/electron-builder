@@ -2,9 +2,9 @@ import { afterEach, describe, test, vi } from "vitest"
 import * as fse from "fs-extra"
 import * as os from "os"
 import * as path from "path"
-import { TraversalNodeModulesCollector } from "app-builder-lib/src/node-module-collector/traversalNodeModulesCollector"
-import { LogMessageByKey } from "app-builder-lib/src/node-module-collector/moduleManager"
-import type { TmpDir } from "builder-util"
+import { TraversalNodeModulesCollector } from "@loongdotjs/app-builder-lib/src/node-module-collector/traversalNodeModulesCollector"
+import { LogMessageByKey } from "@loongdotjs/app-builder-lib/src/node-module-collector/moduleManager"
+import type { TmpDir } from "@loongdotjs/builder-util"
 
 // ---------------------------------------------------------------------------
 // Helpers

@@ -1,11 +1,11 @@
 import { CancellationToken, GitlabOptions } from "builder-util-runtime"
-import { GitlabPublisher, PublishContext } from "electron-publish"
+import { GitlabPublisher, PublishContext } from "@loongdotjs/electron-publish"
 import { beforeEach, describe, test, vi } from "vitest"
 import { GitlabTestFixtures } from "./GitlabTestFixtures"
 
 // Mock the HTTP executor to avoid real network calls
-vi.mock("builder-util", async () => {
-  const actual = await vi.importActual("builder-util")
+vi.mock("@loongdotjs/builder-util", async () => {
+  const actual = await vi.importActual("@loongdotjs/builder-util")
   return {
     ...actual,
     httpExecutor: {

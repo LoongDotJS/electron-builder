@@ -2,8 +2,8 @@ import { promises as fsp } from "fs"
 import * as os from "os"
 import * as path from "path"
 import { afterEach, beforeEach } from "vitest"
-import { checkMakensisOutput, verifyInstallerSize } from "app-builder-lib/src/targets/nsis/nsisValidation"
-import type { Defines } from "app-builder-lib/src/targets/nsis/Defines"
+import { checkMakensisOutput, verifyInstallerSize } from "@loongdotjs/app-builder-lib/src/targets/nsis/nsisValidation"
+import type { Defines } from "@loongdotjs/app-builder-lib/src/targets/nsis/Defines"
 
 // ─── checkMakensisOutput ────────────────────────────────────────────────────
 

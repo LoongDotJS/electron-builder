@@ -1,4 +1,4 @@
-import { Arch, Fields, httpExecutor, InvalidConfigurationError, isEmptyOrSpaces, isTokenCharValid, log } from "builder-util"
+import { Arch, Fields, httpExecutor, InvalidConfigurationError, isEmptyOrSpaces, isTokenCharValid, log } from "@loongdotjs/builder-util"
 import { createReadStream } from "fs"
 import { stat } from "fs/promises"
 import { readFile } from "fs/promises"

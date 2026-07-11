@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 
 export class NsisScriptGenerator {
   private readonly lines: Array<string> = []

@@ -1,11 +1,11 @@
 import { SignOptions as MacSignOptions } from "@electron/osx-sign/dist/cjs/types"
-import { Identity } from "app-builder-lib/out/codeSign/macCodeSign"
-import { DoPackOptions } from "app-builder-lib/out/platformPackager"
-import { WinPackager, getArchSuffix, MacPackager } from "app-builder-lib"
-import { AsyncTaskManager } from "builder-util"
-import { DmgTarget } from "dmg-builder"
-import { Arch, MacConfiguration, Packager, Target } from "electron-builder"
-import SquirrelWindowsTarget from "electron-builder-squirrel-windows"
+import { Identity } from "@loongdotjs/app-builder-lib/out/codeSign/macCodeSign"
+import { DoPackOptions } from "@loongdotjs/app-builder-lib/out/platformPackager"
+import { WinPackager, getArchSuffix, MacPackager } from "@loongdotjs/app-builder-lib"
+import { AsyncTaskManager } from "@loongdotjs/builder-util"
+import { DmgTarget } from "@loongdotjs/dmg-builder"
+import { Arch, MacConfiguration, Packager, Target } from "@loongdotjs/electron-builder"
+import SquirrelWindowsTarget from "@loongdotjs/electron-builder-squirrel-windows"
 import * as path from "path"
 
 export class CheckingWinPackager extends WinPackager {
@@ -18,7 +18,7 @@ export class CheckingWinPackager extends WinPackager {
   //noinspection JSUnusedLocalSymbols
   async pack(outDir: string, arch: Arch, targets: Array<Target>, taskManager: AsyncTaskManager): Promise<any> {
     // skip pack
-    const helperClass: typeof SquirrelWindowsTarget = (await import("electron-builder-squirrel-windows")).default
+    const helperClass: typeof SquirrelWindowsTarget = (await import("@loongdotjs/electron-builder-squirrel-windows")).default
     const newClass = new helperClass(this, outDir)
     const setupFile = this.expandArtifactNamePattern(newClass.options, "exe", arch, "${productName} Setup ${version}.${ext}")
     const installerOutDir = path.join(outDir, `squirrel-windows${getArchSuffix(arch)}`)

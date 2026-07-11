@@ -1,4 +1,4 @@
-import { Arch, asArray, copyOrLinkFile, InvalidConfigurationError, log, walk } from "builder-util"
+import { Arch, asArray, copyOrLinkFile, InvalidConfigurationError, log, walk } from "@loongdotjs/builder-util"
 import { deepAssign, Nullish } from "builder-util-runtime"
 import { emptyDir, readdir, readFile, writeFile } from "fs-extra"
 import * as path from "path"

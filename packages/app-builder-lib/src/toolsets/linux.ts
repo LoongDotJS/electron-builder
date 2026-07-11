@@ -1,4 +1,4 @@
-import { Arch, exists, resolveEnvToolsetPath, use } from "builder-util"
+import { Arch, exists, resolveEnvToolsetPath, use } from "@loongdotjs/builder-util"
 import * as path from "path"
 import { getBinFromUrl } from "../binDownload"
 import { ToolsetConfig } from "../configuration"
@@ -64,7 +64,7 @@ export async function getFpmPath() {
     return customFpmPath
   }
   const exec = "fpm"
-  if (process.platform === "win32" || process.env.USE_SYSTEM_FPM === "true") {
+  if (process.platform === "win32" || process.arch === "loong64" || process.env.USE_SYSTEM_FPM === "true") {
     return exec
   }
   const getKey = () => {
@@ -89,7 +89,8 @@ export async function getFpmPath() {
 }
 
 export async function getAppImageTools(appimageToolVersion: ToolsetConfig["appimage"], targetArch: Arch) {
-  const runtimeArch = targetArch === Arch.armv7l ? "arm32" : targetArch === Arch.arm64 ? "arm64" : targetArch === Arch.ia32 ? "ia32" : "x64"
+  const runtimeArch =
+    targetArch === Arch.armv7l ? "arm32" : targetArch === Arch.arm64 ? "arm64" : targetArch === Arch.ia32 ? "ia32" : targetArch === Arch.loong64 ? "loong64" : "x64"
 
   // Static-runtime layout: tools at root, runtimes/ subdir, lib/{arch}/ subdir
   const getPaths = (artifactPath: string) => ({
@@ -102,7 +103,7 @@ export async function getAppImageTools(appimageToolVersion: ToolsetConfig["appim
   // FUSE2 layout: tools under a host-platform subdir; runtime files at root with target-arch suffix
   const getFuse2Paths = (artifactPath: string) => {
     // mksquashfs/desktop-file-validate are HOST binaries — use process.arch, not targetArch
-    const hostArch = process.arch === "arm" ? "arm32" : process.arch === "arm64" ? "arm64" : process.arch === "ia32" ? "ia32" : "x64"
+    const hostArch = process.arch === "arm" ? "arm32" : process.arch === "arm64" ? "arm64" : process.arch === "ia32" ? "ia32" : process.arch === "loong64" ? "loong64" : "x64"
     const toolRoot = process.platform === "linux" ? `linux-${hostArch}` : "darwin"
     // Runtime files live at root; armv7l target uses "armv7l" filename, not the internal "arm32" alias
     const runtimeSuffix = targetArch === Arch.armv7l ? "armv7l" : runtimeArch

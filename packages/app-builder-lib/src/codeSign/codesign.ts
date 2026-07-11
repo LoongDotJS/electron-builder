@@ -1,4 +1,4 @@
-import { decodeCscLinkBase64, InvalidConfigurationError, resolveCscLinkPath, statOrNull } from "builder-util"
+import { decodeCscLinkBase64, InvalidConfigurationError, resolveCscLinkPath, statOrNull } from "@loongdotjs/builder-util"
 import { outputFile } from "fs-extra"
 import { TmpDir } from "temp-file"
 import { download } from "../binDownload"

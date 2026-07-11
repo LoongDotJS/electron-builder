@@ -7,9 +7,9 @@ import {
   GotDownloaderOptions,
   MirrorOptions,
 } from "@electron/get"
-import { buildGotProxyAgent, exec, exists, log, PADDING, parseValidEnvVarUrl, sanitizeDirPath, to7zaOutputSwitch } from "builder-util"
+import { buildGotProxyAgent, exec, exists, log, PADDING, parseValidEnvVarUrl, sanitizeDirPath, to7zaOutputSwitch } from "@loongdotjs/builder-util"
 import { getPath7za } from "../toolsets/7zip"
-import { MultiProgress } from "electron-publish/out/multiProgress"
+import { MultiProgress } from "@loongdotjs/electron-publish/out/multiProgress"
 import { createReadStream, createWriteStream } from "fs"
 import * as fs from "fs/promises"
 import * as crypto from "crypto"
@@ -22,7 +22,7 @@ import * as unzipper from "unzipper"
 import { HttpError, retry } from "builder-util-runtime"
 import { ElectronPlatformName } from "../electron/ElectronFramework"
 import { CacheState, cleanupCacheDirectory, computeCacheMetadata, readCacheStateFile, validateCacheDirectory, writeCacheState } from "./cacheState"
-import type { ProgressBar } from "electron-publish"
+import type { ProgressBar } from "@loongdotjs/electron-publish"
 
 export type ElectronGetOptions = Omit<
   ElectronPlatformArtifactDetails,

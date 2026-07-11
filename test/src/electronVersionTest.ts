@@ -2,11 +2,11 @@ import * as nodeFs from "fs/promises"
 import * as os from "os"
 import * as path from "path"
 import { afterEach, beforeEach, describe, test, vi } from "vitest"
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 
 // getElectronVersion is the public entry point; passing an explicit config with no
 // electronVersion bypasses getConfig and falls through to computeElectronVersion.
-import { getElectronVersion } from "app-builder-lib/out/electron/electronVersion"
+import { getElectronVersion } from "@loongdotjs/app-builder-lib/out/electron/electronVersion"
 
 function rangeLogMessage(version: string): string {
   return (

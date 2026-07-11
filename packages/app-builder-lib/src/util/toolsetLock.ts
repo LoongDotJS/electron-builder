@@ -1,4 +1,4 @@
-import { log } from "builder-util"
+import { log } from "@loongdotjs/builder-util"
 import { writeFile } from "fs/promises"
 import * as lockfile from "proper-lockfile"
 import * as os from "os"

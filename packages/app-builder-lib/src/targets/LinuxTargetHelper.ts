@@ -1,4 +1,4 @@
-import { asArray, exists, InvalidConfigurationError, isEmptyOrSpaces, log } from "builder-util"
+import { asArray, exists, InvalidConfigurationError, isEmptyOrSpaces, log } from "@loongdotjs/builder-util"
 import { deepAssign } from "builder-util-runtime"
 import { outputFile } from "fs-extra"
 import { Lazy } from "lazy-val"

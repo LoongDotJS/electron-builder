@@ -1,5 +1,5 @@
 import { bundle as bundleFlatpak, FlatpakBundlerBuildOptions, FlatpakManifest } from "@malept/flatpak-bundler"
-import { Arch, copyFile, toLinuxArchString } from "builder-util"
+import { Arch, copyFile, toLinuxArchString } from "@loongdotjs/builder-util"
 import { chmod, outputFile } from "fs-extra"
 import * as path from "path"
 import { Target } from "../core"

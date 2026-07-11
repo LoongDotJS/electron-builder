@@ -1,6 +1,6 @@
-import { Arch } from "builder-util"
+import { Arch } from "@loongdotjs/builder-util"
 import { CancellationToken } from "builder-util-runtime"
-import { GitlabPublisher, PublishContext } from "electron-publish"
+import { GitlabPublisher, PublishContext } from "@loongdotjs/electron-publish"
 import { afterAll, beforeEach, describe, expect, test } from "vitest"
 import { GitlabTestFixtures } from "./GitlabTestFixtures"
 import { GitlabTestHelper } from "./GitlabTestHelper"
