@@ -16,6 +16,7 @@ You may also refer to [darkyzhou/electron-loong64](https://github.com/darkyzhou/
 
 ## Available Versions
 
+- `26.15.6`: branch [electron-builder@26.15.6-loong64](https://github.com/LoongDotJS/electron-builder/tree/electron-builder%4026.15.6-loong64)
 - `26.0.12`: branch [electron-builder@26.0.12-loong64](https://github.com/LoongDotJS/electron-builder/tree/electron-builder%4026.0.12-loong64)
 - `25.1.8`: branch [electron-builder@25.1.8-loong64](https://github.com/LoongDotJS/electron-builder/tree/electron-builder%4025.1.8-loong64)
 - `24.13.3`: branch [v24.13.3-loong64](https://github.com/LoongDotJS/electron-builder/tree/v24.13.3-loong64?tab=readme-ov-file)
