@@ -454,8 +454,8 @@ importers:
         specifier: workspace:*
         version: link:../builder-util
       electron-winstaller:
-        specifier: 5.4.0
-        version: 5.4.0
+        specifier: 5.4.4
+        version: 5.4.4
     devDependencies:
       '@types/archiver':
         specifier: 5.3.1
@@ -655,8 +655,8 @@ importers:
         specifier: workspace:*
         version: link:../packages/electron-updater
       electron-winstaller:
-        specifier: 5.4.0
-        version: 5.4.0
+        specifier: 5.4.4
+        version: 5.4.4
       fast-xml-parser:
         specifier: 5.7.0
         version: 5.7.0
@@ -5874,8 +5874,8 @@ packages:
   electron-to-chromium@1.5.353:
     resolution: {integrity: sha512-kOrWphBi8TOZyiJZqsgqIle0lw+tzmnQK83pV9dZUd01Nm2POECSyFQMAuarzZdYqQW7FH9RaYOuaRo3h+bQ3w==}
 
-  electron-winstaller@5.4.0:
-    resolution: {integrity: sha512-bO3y10YikuUwUuDUQRM4KfwNkKhnpVO7IPdbsrejwN9/AABJzzTQ4GeHwyzNSrVO+tEH3/Np255a3sVZpZDjvg==}
+  electron-winstaller@5.4.4:
+    resolution: {integrity: sha512-j9ETcBGJaXxAY/b6UBpR7LZfjdU4BAO+yvr4ifqHEdyuc3UNCy91PDGkWKY5UQ4coHNYfnwFggrqD6QPeFGAlg==}
     engines: {node: '>=8.0.0'}
 
   electron@39.8.5:
@@ -16931,12 +16931,13 @@ snapshots:
 
   electron-to-chromium@1.5.353: {}
 
-  electron-winstaller@5.4.0:
+  electron-winstaller@5.4.4:
     dependencies:
       '@electron/asar': 3.4.1
       debug: 4.4.3
       fs-extra: 7.0.1
       lodash: 4.17.21
+      semver: 7.7.3
       temp: 0.9.4
     optionalDependencies:
       '@electron/windows-sign': 1.2.1
